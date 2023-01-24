@@ -1,28 +1,25 @@
-import Footer from "./footer";
-import Header from "./header";
+/* eslint-disable require-jsdoc */
+import React from "react";
+// import Footer from "./footer";
 import SideBar from "./sidebar";
 
 type layoutType = {
-	children: any;
+    children: any;
 };
 
 export default function Layout({ children }: layoutType) {
-	return (
-		<section className="flex h-screen w-full">
-			<SideBar />
+    return (
+        <section className="flex h-screen w-full">
+            <SideBar />
 
-			<div className="flex h-screen flex-grow flex-col">
-				<Header
-					title={"Admin Dashboard"}
-					number={21}
-					leftText="Dashboard"
-					rightText="Getting started"
-				/>
+            <div
+                className="flex h-screen flex-grow flex-col
+			"
+            >
+                {children}
 
-				{children}
-
-				<Footer />
-			</div>
-		</section>
-	);
+                {/* <Footer /> */}
+            </div>
+        </section>
+    );
 }

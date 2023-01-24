@@ -1,5 +1,10 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable require-jsdoc */
+import React from "react";
 import Head from "next/head";
+import Header from "../components/header";
 import Layout from "../components/layout";
+import Link from "next/link";
 
 export default function Home() {
     return (
@@ -16,8 +21,146 @@ export default function Home() {
                         content="width=device-width, initial-scale=1"
                     />
                 </Head>
+
+                <Header
+                    title={"Admin Dashboard"}
+                    number={21}
+                    leftText="Dashboard"
+                />
                 {/* Code goes into the main tag */}
-                <main className="bg-[#FAFAFA]"></main>
+                <main className="bg-[#FAFAFA] ">
+                    {/* Bottom menu */}
+                    <div className="flex items-center bg-white justify-between border-b px-[5rem] py-4">
+                        <div className="text-[#FA790F]">Dashbaord</div>
+                        <Link href={"#"} className="text-[#0052FF]">
+                            Getting started
+                        </Link>
+                    </div>
+
+                    {/* Welconme messgae */}
+                    <p className="flex items-center px-[5rem] py-4">
+                        Welcome to your dashboard🎉
+                    </p>
+
+                    {/* First row of boxes */}
+                    <div className="flex flex-row  gap-x-8 h-[8.75rem] px-[5rem] mb-10">
+                        <div className="flex flex-col justify-center items-center basis-52 border rounded-lg bg-white shadow-[0_0_10px_rgba(0,0,0,0.07)]">
+                            <p className="mb-2">as</p>
+                            <p>as</p>
+                        </div>
+
+                        <div className="flex flex-col justify-center items-center basis-52 border rounded-lg bg-white shadow-[0_0_10px_rgba(0,0,0,0.07)]">
+                            <p className="mb-2">as</p>
+                            <p>as</p>
+                        </div>
+
+                        <div className="flex flex-col justify-center items-center basis-52 border rounded-lg bg-white shadow-[0_0_10px_rgba(0,0,0,0.07)]">
+                            <p className="mb-2">as</p>
+                            <p>as</p>
+                        </div>
+
+                        <div className="flex flex-col justify-center items-center basis-52 border rounded-lg shadow-[0_0_10px_rgba(0,0,0,0.07)]">
+                            <p className="mb-2">as</p>
+                            <p>as</p>
+                        </div>
+                    </div>
+
+                    {/* Second set of boxes */}
+                    <div className="flex flex-row  h-[19.376rem] mb-10 px-[5rem]">
+                        <div className="flex flex-col justify-center items-center justify-between mr-2.5 basis-52 border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
+                            <p>sd</p>
+                            <p>sd</p>
+                            <p>sd</p>
+                        </div>
+
+                        <div className="flex flex-col justify-center items-center justify-between mr-5 basis-52 border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
+                            <p>sd</p>
+                            <p>sd</p>
+                            <p>sd</p>
+                        </div>
+
+                        <div className="flex flex-col justify-center items-center basis-[33.125rem] border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
+                            <p>sd</p>
+                        </div>
+                    </div>
+
+                    {/* Third row */}
+                    <div className="flex flex-row h-[16.8125rem] px-[5rem] mb-10 ">
+                        <div className="basis-[60.5rem]  border rounded-lg bg-white shadow-[0_4px_20px_rgba(171,171,171,0.25)]">
+                            <div className="flex justify-between px-5 pt-5">
+                                <p className="font-medium">
+                                    Today's Pending Approvals
+                                </p>
+                                <Link
+                                    href={"#"}
+                                    className="text-[#0C17DC] underline"
+                                >
+                                    See all
+                                </Link>
+                            </div>
+
+                            <table className="table-auto flex flex-col px-10 pt-2.5">
+                                <thead>
+                                    <tr className="flex justify-between justify-center">
+                                        <th>Name</th>
+                                        <th>Amount Requested</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr className="flex justify-between border-b">
+                                        <td>
+                                            <p>Ama Yeboad</p>
+                                            <p>exammple@gmail.com</p>
+                                        </td>
+                                        <td>
+                                            <p>GHC 3000.00</p>
+                                            <p>Requested on 23/04/2022</p>
+                                        </td>
+                                        <td>
+                                            <Link href={""}>
+                                                <button
+                                                    type="button"
+                                                    className="text-white bg-[#D0650D]  font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2"
+                                                >
+                                                    View
+                                                </button>
+                                            </Link>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    {/* Fourth row */}
+                    <div className="flex flex-row h-[12.625rem] px-[5rem] mb-10">
+                        <div className="basis-[60.5rem]  border rounded-lg bg-white shadow-[0_4px_20px_rgba(171,171,171,0.25)]">
+                            <div className="flex justify-between px-5 pt-5">
+                                <p className="font-medium">Report Summary</p>
+                                <Link
+                                    href={"#"}
+                                    className="text-[#0C17DC] underline"
+                                >
+                                    See in detail
+                                </Link>
+                            </div>
+
+                            <div className="flex flex-row justify-between px-7 pt-8">
+                                <div className="basis-[17.375rem] h-20 border boreder-[#FEFEFE] rounded-xl flex items-center justify-center">
+                                    asd
+                                </div>
+                                <div className="basis-[17.375rem] h-20 border boreder-[#FEFEFE] rounded-xl flex items-center justify-center">
+                                    asd
+                                </div>
+                                <div className="basis-[17.375rem] h-20 border boreder-[#FEFEFE] rounded-xl flex items-center justify-center">
+                                    asd
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
             </Layout>
         </>
     );
