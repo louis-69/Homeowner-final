@@ -4,7 +4,7 @@ import React from "react";
 import SideBar from "./sidebar";
 
 type layoutType = {
-    children: any;
+    children?: any;
 };
 
 export default function Layout({ children }: layoutType) {
@@ -13,7 +13,7 @@ export default function Layout({ children }: layoutType) {
             <SideBar />
 
             <div
-                className="flex h-screen flex-grow flex-col
+                className="flex h-screen flex-grow flex-col pl-[16rem]
 			"
             >
                 {children}

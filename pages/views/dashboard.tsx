@@ -2,11 +2,18 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
 import Head from "next/head";
-import Header from "../components/header";
-import Layout from "../components/layout";
+import Header from "../../components/header";
+import Layout from "../../components/layout";
+import Image from "next/image";
 import Link from "next/link";
+import SmallRegtangle, {
+    LargeRegtangle,
+    Bubble,
+} from "../../components/dashboardshapes";
+import integration from "../../assets/integrations.png";
+import plus from "../../assets/plus.png";
 
-export default function Home() {
+export default function Dashbaord() {
     return (
         <>
             <Layout>
@@ -24,12 +31,12 @@ export default function Home() {
 
                 <Header title={"Admin Dashboard"} number={21} />
                 {/* Code goes into the main tag */}
-                <main className="bg-[#FAFAFA]">
+                <main className="bg-[#FAFAFA] ">
                     {/* Bottom menu */}
                     <div className="flex items-center bg-white justify-between border-b px-[5rem] py-4">
                         <div className="text-[#FA790F]">Dashbaord</div>
                         <Link href={"#"} className="text-[#0052FF]">
-                            Getting started
+                            Getting startedss
                         </Link>
                     </div>
 
@@ -39,41 +46,46 @@ export default function Home() {
                     </p>
 
                     {/* First row of boxes */}
-                    <div className="flex flex-row  gap-x-8 h-[8.75rem] px-[5rem] mb-10 w-full">
-                        <div className="flex flex-col justify-center items-center basis-52 border rounded-lg bg-white shadow-[0_0_10px_rgba(0,0,0,0.07)]">
-                            <p className="mb-2">as</p>
-                            <p>as</p>
-                        </div>
+                    <div className="flex flex-row  gap-x-8 h-[8.75rem] px-[5rem] mb-10">
+                        <SmallRegtangle
+                            number={230}
+                            description={"Total Requests"}
+                        />
+
+                        <SmallRegtangle
+                            number={"GHC 2300"}
+                            description={"Total Money Sent"}
+                        />
+
+                        <SmallRegtangle
+                            number={230}
+                            description={"Total Requests"}
+                        />
 
                         <div className="flex flex-col justify-center items-center basis-52 border rounded-lg bg-white shadow-[0_0_10px_rgba(0,0,0,0.07)]">
-                            <p className="mb-2">as</p>
-                            <p>as</p>
-                        </div>
-
-                        <div className="flex flex-col justify-center items-center basis-52 border rounded-lg bg-white shadow-[0_0_10px_rgba(0,0,0,0.07)]">
-                            <p className="mb-2">as</p>
-                            <p>as</p>
-                        </div>
-
-                        <div className="flex flex-col justify-center items-center basis-52 border rounded-lg bg-white shadow-[0_0_10px_rgba(0,0,0,0.07)]">
-                            <p className="mb-2">as</p>
-                            <p>as</p>
+                            <p className="flex flex-row gap-4 mb-2">
+                                <Image src={plus} alt={""} />
+                                <Image src={integration} alt={""} />
+                            </p>
+                            <p className="font-normal text-xs text-slate-400">
+                                Add Integration
+                            </p>
                         </div>
                     </div>
 
                     {/* Second set of boxes */}
                     <div className="flex flex-row  h-[19.376rem] mb-10 px-[5rem]">
-                        <div className="flex flex-col justify-center items-center justify-between mr-2.5 basis-52 border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
-                            <p>sd</p>
-                            <p>sd</p>
-                            <p>sd</p>
-                        </div>
+                        <LargeRegtangle
+                            description={"Approval Rate"}
+                            percentage={"65%"}
+                            amount={"GHC 30,000.70"}
+                        />
 
-                        <div className="flex flex-col justify-center items-center justify-between mr-5 basis-52 border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
-                            <p>sd</p>
-                            <p>sd</p>
-                            <p>sd</p>
-                        </div>
+                        <LargeRegtangle
+                            description={"Default Rate"}
+                            percentage={"65%"}
+                            amount={"GHC 30,000.70"}
+                        />
 
                         <div className="flex flex-col justify-center items-center basis-[33.125rem] border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
                             <p>sd</p>
@@ -144,15 +156,9 @@ export default function Home() {
                             </div>
 
                             <div className="flex flex-row justify-between px-7 pt-8">
-                                <div className="basis-[17.375rem] h-20 border boreder-[#FEFEFE] rounded-xl flex items-center justify-center">
-                                    asd
-                                </div>
-                                <div className="basis-[17.375rem] h-20 border boreder-[#FEFEFE] rounded-xl flex items-center justify-center">
-                                    asd
-                                </div>
-                                <div className="basis-[17.375rem] h-20 border boreder-[#FEFEFE] rounded-xl flex items-center justify-center">
-                                    asd
-                                </div>
+                                <Bubble number={22} />
+                                <Bubble number={22} />
+                                <Bubble number={22} />
                             </div>
                         </div>
                     </div>

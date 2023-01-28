@@ -7,7 +7,7 @@ import Link from "next/link";
 function Footer() {
     return (
         <>
-            <footer className="fixed bottom-0 p-4 text-black font-bold bg-white border-t border-gray-200 shadow md:flex md:items-center md:justify-between md:p-6 lg:w-full">
+            <footer className="fixed bottom-0 p-4 text-black font-bold bg-white border-t border-gray-200 md:flex md:items-center md:justify-between md:p-6 lg:w-full">
                 <ul className="flex flex-wrap items-center mt-3 text-sm  sm:mt-0">
                     <li>
                         <Link href="#" className="mr-4 hover:underline md:mr-6">

@@ -1,16 +1,14 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
 import Image from "next/image";
-import bell from "../public/images/bell.png";
-import message from "../public/images/message.png";
-import zenith from "../public/images/zenith.jpg";
-import line from "../public/images/line.png";
+import bell from "../assets/bell.png";
+import message from "../assets/message.png";
+import zenith from "../assets/zenith.jpg";
+import line from "../assets/line.png";
 
 type headerProp = {
-    number: number;
+    number?: number;
     title: string;
-    leftText: string;
-    rightText?: string;
 };
 
 function Header(props: headerProp) {

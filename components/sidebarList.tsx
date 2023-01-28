@@ -1,7 +1,7 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 
 type sideBarProp = {
     icon?: any;
@@ -11,15 +11,12 @@ type sideBarProp = {
 function List(props: sideBarProp) {
     return (
         <li>
-            <Link
-                href="#"
-                className="flex items-center p-2 pl-10 text-base font-medium rounded-lg hover:bg-yellow-50/40"
-            >
+            <div className="flex items-center p-2 pl-10 text-base font-medium rounded-lg hover:bg-yellow-50/40">
                 <Image src={props.icon} alt="" />
                 <span className="flex-1 ml-3 whitespace-nowrap">
                     {props.name}
                 </span>
-            </Link>
+            </div>
         </li>
     );
 }
