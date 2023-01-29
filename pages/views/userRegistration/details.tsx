@@ -296,10 +296,399 @@ export default function Detail() {
                             </div>
                         </TabPanel>
                         <TabPanel>
-                            <h2>Any content 2</h2>
+                            {/* Form */}
+                            <div className="mt-10 px-[5rem]">
+                                <form className="bg-white px-[2.5rem] pb-20">
+                                    {/* Basic */}
+                                    <p className="font-bold py-6">Basic:</p>
+                                    <div className="grid grid-cols-2 grid-rows-2 gap-y-5">
+                                        <div>
+                                            <label
+                                                htmlFor="clientName"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Client Name
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="clientName"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                placeholder="Enter name"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="email"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Client email
+                                            </label>
+                                            <input
+                                                type="email"
+                                                id="email"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                placeholder="Enter email"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="education"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Highest Level of Education
+                                            </label>
+                                            <select
+                                                id="education"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                required
+                                            >
+                                                <option>Primary</option>
+                                                <option>Tetiary</option>
+                                                <option>Bsc</option>
+                                                <option>PhD</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="phoneNumber"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Phone
+                                            </label>
+                                            <input
+                                                type="number"
+                                                id="phoneNumber"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2"
+                                                placeholder="+233"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="gender"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Gender
+                                            </label>
+                                            <select
+                                                id="gender"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                required
+                                            >
+                                                <option>Male</option>
+                                                <option>Female</option>
+                                                <option>Other</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="maritalStatus"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Marital Status
+                                            </label>
+                                            <select
+                                                id="maritalStatus"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                required
+                                            >
+                                                <option>Single</option>
+                                                <option>Married</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    {/* Address */}
+                                    <p className="font-bold py-6">Address:</p>
+                                    <div className="grid grid-cols-2 grid-rows-2 gap-y-5">
+                                        <div>
+                                            <label
+                                                htmlFor="country"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Country
+                                            </label>
+                                            <select
+                                                id="country"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                required
+                                            >
+                                                <option>#</option>
+                                                <option>#</option>
+                                                <option>#</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="city"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                City
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="city"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                placeholder="Enter city"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="education"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Region
+                                            </label>
+                                            <select
+                                                id="education"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                required
+                                            >
+                                                <option>#</option>
+                                                <option>#</option>
+                                                <option>#</option>
+                                                <option>#</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="digitalAddress"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Digital Address
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="digitalAddress"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2"
+                                                placeholder="Enter your digital address here"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="zipCode"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Zipcode
+                                            </label>
+                                            <input
+                                                type="number"
+                                                id="zipCode"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2"
+                                                placeholder="Enter your zipcode here"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="postalAddress"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Postal Address
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="postalAddress"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2"
+                                                placeholder="Enter your postal address here"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="residentialAddress"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Residential Address
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="residentialAddress"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2"
+                                                placeholder="Enter your residential address here"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+
+                                    {/* Health */}
+                                    <p className="font-bold py-6">Health:</p>
+                                    <div className="grid grid-cols-2 grid-rows-2 gap-y-5">
+                                        <div className="flex items-center mb-4">
+                                            <p className="mr-6">
+                                                Any Health issues?
+                                            </p>
+                                            <input
+                                                id="yes"
+                                                type="radio"
+                                                name="yes"
+                                                value="yes"
+                                                className="w-4 h-4 border-[#FA790F] focus:ring-2 "
+                                            />
+                                            <label
+                                                htmlFor="yes"
+                                                className="block ml-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Yes
+                                            </label>
+                                            <input
+                                                id="no"
+                                                type="radio"
+                                                name="no"
+                                                value="no"
+                                                className="w-4 h-4 border-[#FA790F] focus:ring-2 ml-10"
+                                            />
+                                            <label
+                                                htmlFor="no"
+                                                className="block ml-2 text-sm font-medium text-gray-900"
+                                            >
+                                                No
+                                            </label>
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="condition"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Condition
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="condition"
+                                                className="bg-[#CDCDCF] border border-gray-300 text-[#58575F] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                placeholder="Name of condition"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="allergies"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Allergies
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="allergies"
+                                                className="bg-[#CDCDCF] border border-gray-300 text-[#58575F] text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                placeholder="List allergies"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="medicalHistory"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Medical History
+                                            </label>
+                                            <input
+                                                type="file"
+                                                id="medicalHistory"
+                                                className="bg-[#CDCDCF] border border-gray-300 text-[#58575F] w-full text-sm rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
+                                                placeholder="Name of medicalHistory"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+
+                                    {/* Education */}
+                                    <p className="font-bold py-6">Education:</p>
+                                    <div className="grid grid-cols-2 grid-rows-2 gap-y-5">
+                                        <div>
+                                            <label
+                                                htmlFor="education"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Highest Level of Education
+                                            </label>
+                                            <select
+                                                id="education"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                required
+                                            >
+                                                <option>Primary</option>
+                                                <option>Tetiary</option>
+                                                <option>Bsc</option>
+                                                <option>PhD</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="school"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                School
+                                            </label>
+                                            <input
+                                                type="text"
+                                                id="school"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                placeholder="Enter school"
+                                                required
+                                            />
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="dateCommenced"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Date Commenced
+                                            </label>
+                                            <select
+                                                id="dateCommenced"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                required
+                                            >
+                                                <option>#</option>
+                                                <option>#</option>
+                                                <option>#</option>
+                                                <option>#</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="dateCompleted"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Date Completed
+                                            </label>
+                                            <select
+                                                id="dateCompleted"
+                                                className="border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-11/12 p-2.5"
+                                                required
+                                            >
+                                                <option>#</option>
+                                                <option>#</option>
+                                                <option>#</option>
+                                                <option>#</option>
+                                            </select>
+                                        </div>
+                                        <div>
+                                            <label
+                                                htmlFor="cerificate"
+                                                className="block mb-2 text-sm font-medium text-gray-900"
+                                            >
+                                                Certificate
+                                            </label>
+                                            <input
+                                                type="file"
+                                                id="cerificate"
+                                                className="border border-gray-300 text-gray-500 w-full text-sm rounded-lg cursor-pointer bg-gray-50 focus:outline-none"
+                                                placeholder="Name of medicalHistory"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
                         </TabPanel>
                         <TabPanel>
-                            <h2>Any content 3</h2>
+                            <h2>Any content 4</h2>
                         </TabPanel>
                         <TabPanel>
                             <h2>Any content 4</h2>
