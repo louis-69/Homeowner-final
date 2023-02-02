@@ -1,12 +1,18 @@
 /* eslint-disable require-jsdoc */
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Header from "../../../components/header";
 import Layout from "../../../components/layout";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import Image from "next/image";
+import trash from "../../../assets/trash.png";
+import notify from "../../../assets/mail.png";
+import Bubble from "../../../components/bubbles";
 
 export default function ClientList() {
+    const [isChecked, setIsChecked] = useState(false);
+
     return (
         <>
             <Layout>
@@ -169,6 +175,12 @@ export default function ClientList() {
                                                             id="checkbox-table-1"
                                                             type="checkbox"
                                                             className="h-4 w-4 rounded  bg-gray-100 text-[#FA790F]"
+                                                            checked={isChecked}
+                                                            onChange={() =>
+                                                                setIsChecked(
+                                                                    !isChecked
+                                                                )
+                                                            }
                                                         />
                                                         <label
                                                             htmlFor="checkbox-table-1"
@@ -197,18 +209,35 @@ export default function ClientList() {
                                                     GHC 2700.00
                                                 </td>
                                                 <td className="pl-6 py-4">
-                                                    <p>Approved</p>
+                                                    <Bubble name={"Rejected"} />
                                                     <p className="text-gray-500 text-xs">
                                                         On 23/04/2022
                                                     </p>
                                                 </td>
-                                                <td className="pl-6 py-4">
-                                                    <a
-                                                        href="#"
-                                                        className="font-medium text-blue-600 hover:underline"
-                                                    >
-                                                        View Details
-                                                    </a>
+                                                <td className="pl-6 py-4 flex flex-row gap-x-7">
+                                                    {isChecked ? (
+                                                        <>
+                                                            <Link href={""}>
+                                                                <Image
+                                                                    src={notify}
+                                                                    alt=""
+                                                                />
+                                                            </Link>
+                                                            <Link href={""}>
+                                                                <Image
+                                                                    src={trash}
+                                                                    alt=""
+                                                                />
+                                                            </Link>
+                                                        </>
+                                                    ) : (
+                                                        <a
+                                                            href="#"
+                                                            className="font-medium text-blue-600 hover:underline"
+                                                        >
+                                                            View Details
+                                                        </a>
+                                                    )}
                                                 </td>
                                             </tr>
                                             {/* Second */}
@@ -247,7 +276,7 @@ export default function ClientList() {
                                                     GHC 2700.00
                                                 </td>
                                                 <td className="pl-6 py-4">
-                                                    <span className="bg-[#FFECCC] text-[#965E00] text-sm font-medium mr-2 px-4 py-0.5 rounded-lg list-disc">
+                                                    <span className="bg-[#FFECCC] text-[#965E00] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg">
                                                         ● Approved
                                                     </span>
                                                     <p className="text-gray-500 text-xs">
@@ -299,7 +328,7 @@ export default function ClientList() {
                                                     GHC 2700.00
                                                 </td>
                                                 <td className="pl-6 py-4">
-                                                    <span className="bg-[#FFE0E0] text-[#D30000] text-sm font-medium mr-2 px-4 py-0.5 rounded-lg list-disc">
+                                                    <span className="bg-[#FFE0E0] text-[#D30000] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg">
                                                         ● Rejected
                                                     </span>
                                                     <p className="text-gray-500 text-xs">
@@ -351,7 +380,7 @@ export default function ClientList() {
                                                     GHC 2700.00
                                                 </td>
                                                 <td className="pl-6 py-4">
-                                                    <span className="bg-[#CDFFCD] text-[#007F00] text-sm font-medium mr-2 px-4 py-0.5 rounded-lg list-disc">
+                                                    <span className="bg-[#CDFFCD] text-[#007F00] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg">
                                                         ● Paid
                                                     </span>
                                                     <p className="text-gray-500 text-xs">

@@ -6,12 +6,10 @@ import Header from "../../../components/header";
 import Layout from "../../../components/layout";
 import Link from "next/link";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
-import BankInformation from "./bankInformation";
-import BusinessInformation from "./businessInformation";
-import EmergencyInformation from "./emergencyInformation";
-import PersonalInformation from "./personalInformation";
+import BusinessForm from "./forms/business";
+import PersonalForm from "./forms/personal";
 
-export default function Detail() {
+export default function FormPage() {
     return (
         <>
             <Layout>
@@ -36,15 +34,18 @@ export default function Detail() {
                             User registration
                             <span className="text-black">/View Details</span>
                         </div>
-                        <Link href={"/views/userRegistration/formPage"}>
-                            <button className="bg-[#D0650D] text-white rounded-md p-1 px-10">
-                                Edit
+                        <Link href={"/"}>
+                            <button className="border border-[#D0650D] text-[#D0650D] rounded-md p-1 px-9 mr-2 hover:text-orange-300">
+                                Cancel
+                            </button>
+                            <button className="bg-[#D0650D] text-white rounded-md p-1 px-10 hover:shadow-md hover:shadow-[#D0650D]">
+                                Save
                             </button>
                         </Link>
                     </div>
 
                     <Tabs>
-                        <div className="flex items-end  h-[4.6rem] justify-between  px-[5rem]">
+                        <div className="flex items-end  h-[4.6rem] justify-between px-[5rem]">
                             <TabList className="flex flex-row gap-x-[8rem] ">
                                 <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
                                     Personal Information
@@ -52,26 +53,14 @@ export default function Detail() {
                                 <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
                                     Business Information
                                 </Tab>
-                                <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
-                                    Bank Information
-                                </Tab>
-                                <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
-                                    Emergency Information
-                                </Tab>
                             </TabList>
                         </div>
 
                         <TabPanel>
-                            <PersonalInformation />
+                            <PersonalForm />
                         </TabPanel>
                         <TabPanel>
-                            <BusinessInformation />
-                        </TabPanel>
-                        <TabPanel>
-                            <BankInformation />
-                        </TabPanel>
-                        <TabPanel>
-                            <EmergencyInformation />
+                            <BusinessForm />
                         </TabPanel>
                     </Tabs>
                 </main>
