@@ -31,7 +31,7 @@ export default function Dashbaord() {
 
                 <Header title={"Admin Dashboard"} number={21} />
                 {/* Code goes into the main tag */}
-                <main className="bg-[#FAFAFA] ">
+                <main className="bg-[#FAFAFA]">
                     {/* Bottom menu */}
                     <div className="flex items-center bg-white justify-between border-b px-[5rem] py-4">
                         <div className="text-[#FA790F]">Dashbaord</div>

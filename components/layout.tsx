@@ -9,7 +9,7 @@ type layoutType = {
 
 export default function Layout({ children }: layoutType) {
     return (
-        <section className="flex h-screen w-full">
+        <section className=" min-h-screen w-full flex flex-col">
             <SideBar />
 
             <div

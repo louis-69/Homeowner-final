@@ -86,55 +86,58 @@ export default function PersonalInformation() {
             </div>
 
             {/* Accordian 3 */}
-            <div className="flex flex-row">
-                <div className="px-[5rem] py-5">
-                    <h2 className="flex p-2 font-medium text-left text-white bg-[#D0650D] border border-b-0 border-gray-200 rounded-t-xl">
-                        Basic Information
-                    </h2>
-                    <div className="grid grid-cols-3 gap-y-4 gap-x-2 p-5  font-normal border bg-white border-b border-gray-200">
-                        <div>
-                            <p className="font-medium">Health Conditions</p>
-                            <p className="text-gray-500">N/A</p>
-                        </div>
-                        <div>
-                            <p className="font-medium">Allergies</p>
-                            <p className="text-gray-500">N/A</p>
-                        </div>
-                        <div>
-                            <p className="font-medium">Medical History</p>
-                            <p className="text-gray-500">N/A</p>
+            <div>
+                <div className="flex flex-row">
+                    <div className="px-[5rem] py-5">
+                        <h2 className="flex p-2 font-medium text-left text-white bg-[#D0650D] border border-b-0 border-gray-200 rounded-t-xl">
+                            Health
+                        </h2>
+                        <div className="grid grid-cols-3 gap-y-4 gap-x-2 p-5  font-normal border bg-white border-b border-gray-200">
+                            <div>
+                                <p className="font-medium">Health Conditions</p>
+                                <p className="text-gray-500">N/A</p>
+                            </div>
+                            <div>
+                                <p className="font-medium">Allergies</p>
+                                <p className="text-gray-500">N/A</p>
+                            </div>
+                            <div>
+                                <p className="font-medium">Medical History</p>
+                                <p className="text-gray-500">N/A</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-
-                <div className="px-[5rem] py-5 w-3/5">
-                    <h2 className="flex p-2 font-medium w-full text-left text-white bg-[#D0650D] border border-b-0 border-gray-200 rounded-t-xl">
-                        Education
-                    </h2>
-                    <div className="grid grid-cols-3 gap-y-4 gap-x-2 p-5 py-5 font-normal border bg-white border-b border-gray-200">
-                        <div>
-                            <p className="font-medium">
-                                Highest Level of Education
-                            </p>
-                            <p className="text-gray-500">Undergraduate</p>
-                        </div>
-                        <div>
-                            <p className="font-medium">School</p>
-                            <p className="text-gray-500">Ashesi University</p>
-                        </div>
-                        <div>
-                            <p className="font-medium">Date Commenced</p>
-                            <p className="text-gray-500">10/10/2014</p>
-                        </div>
-                        <div>
-                            <p className="font-medium">Date Completed</p>
-                            <p className="text-gray-500">10/10/2018</p>
-                        </div>
-                        <div>
-                            <p className="font-medium">Certificate</p>
-                            <p className="text-[#0052FF] underline">
-                                View file
-                            </p>
+                    <div className="px-[5rem] py-5 w-3/5">
+                        <h2 className="flex p-2 font-medium w-full text-left text-white bg-[#D0650D] border border-b-0 border-gray-200 rounded-t-xl">
+                            Education
+                        </h2>
+                        <div className="grid grid-cols-3 gap-y-4 gap-x-2 p-5 py-5 font-normal border bg-white border-b border-gray-200">
+                            <div>
+                                <p className="font-medium">
+                                    Highest Level of Education
+                                </p>
+                                <p className="text-gray-500">Undergraduate</p>
+                            </div>
+                            <div>
+                                <p className="font-medium">School</p>
+                                <p className="text-gray-500">
+                                    Ashesi University
+                                </p>
+                            </div>
+                            <div>
+                                <p className="font-medium">Date Commenced</p>
+                                <p className="text-gray-500">10/10/2014</p>
+                            </div>
+                            <div>
+                                <p className="font-medium">Date Completed</p>
+                                <p className="text-gray-500">10/10/2018</p>
+                            </div>
+                            <div>
+                                <p className="font-medium">Certificate</p>
+                                <p className="text-[#0052FF] underline">
+                                    View file
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
