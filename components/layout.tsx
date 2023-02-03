@@ -1,6 +1,6 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
-// import Footer from "./footer";
+import Footer from "./footer";
 import SideBar from "./sidebar";
 
 type layoutType = {
@@ -18,7 +18,7 @@ export default function Layout({ children }: layoutType) {
             >
                 {children}
 
-                {/* <Footer /> */}
+                <Footer />
             </div>
         </section>
     );

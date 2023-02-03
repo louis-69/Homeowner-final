@@ -39,7 +39,7 @@ function SideBar() {
                         >
                             <List icon={Client} name={"Client List"} />
                         </Link>
-                        <Link href={""}>
+                        <Link href={"/views/userRegistration/transaction"}>
                             <List icon={Transaction} name={"Transaction"} />
                         </Link>
                         <Title name={"Morgage Requests"} />
