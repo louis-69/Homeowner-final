@@ -13,6 +13,7 @@ import Support from "../assets/support.png";
 import Transaction from "../assets/transactions.png";
 import loan from "../assets/loan.svg";
 import dashboard from "../assets/dashboard.svg";
+import percent from "../assets/percent.png";
 import Link from "next/link";
 
 function SideBar() {
@@ -23,7 +24,7 @@ function SideBar() {
                 aria-label="Sidebar"
             >
                 <aside className="px-3 py-4 overflow-y-auto bg-[#d0650d]  lg:h-full no-scrollbar">
-                    <div className="h-11 w-20 ml-14 my-14">
+                    <div className="h-11 w-20 ml-14 mt-10 mb-7">
                         <Link href={"/"}>
                             <Image src={Logo} alt="Logo" />
                         </Link>
@@ -53,6 +54,9 @@ function SideBar() {
                         </Link>
                         <Link href={""}>
                             <List icon={Report} name={"Report"} />
+                        </Link>
+                        <Link href={"/views/mortgageRequests/rates"}>
+                            <List icon={percent} name={"Rates"} />
                         </Link>
                         <Title name={"Other"} />
                         <Link href={""}>

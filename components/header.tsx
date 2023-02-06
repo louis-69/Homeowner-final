@@ -45,7 +45,9 @@ function Header(props: headerProp) {
                         <Image src={zenith} alt="" />
                     </div>
                     <div>
-                        <p className="text-[#FA790F]">Zenith bank</p>
+                        <p className="text-[#FA790F] font-medium">
+                            Zenith bank
+                        </p>
                         <p className="text-[#FB8F37]">Manager</p>
                     </div>
                 </div>

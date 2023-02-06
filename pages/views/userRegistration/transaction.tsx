@@ -24,7 +24,7 @@ export default function ClientList() {
                     />
                 </Head>
 
-                <Header title={"User Registration"} number={5} />
+                <Header title={"Transactions"} number={5} />
                 {/* Code goes into the main tag */}
                 <main className="bg-[#FAFAFA] min-h-screen">
                     {/* Bottom menu */}
