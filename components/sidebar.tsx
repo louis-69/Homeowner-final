@@ -44,15 +44,15 @@ function SideBar() {
                             <List icon={Transaction} name={"Transaction"} />
                         </Link>
                         <Title name={"Morgage Requests"} />
-                        <Link href={""}>
+                        <Link href={"/views/mortgageRequests/pendingApprovals"}>
                             {" "}
                             <List icon={Pending} name={"Pending Approval"} />
                         </Link>
-                        <Link href={""}>
+                        <Link href={"/views/mortgageRequests/loanProcessing"}>
                             {" "}
                             <List icon={loan} name={"Loan Processing"} />
                         </Link>
-                        <Link href={""}>
+                        <Link href={"/views/mortgageRequests/reports"}>
                             <List icon={Report} name={"Report"} />
                         </Link>
                         <Link href={"/views/mortgageRequests/rates"}>
