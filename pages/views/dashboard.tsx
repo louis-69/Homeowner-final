@@ -12,6 +12,7 @@ import SmallRegtangle, { Info } from "../../components/dashboardshapes";
 import Bubble from "../../components/bubbles";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import BarChart from "../../components/barChat";
 
 export default function Dashbaord() {
     const percentage = 65;
@@ -125,7 +126,7 @@ export default function Dashbaord() {
                                 </p>
                             </div>
                             <div className="flex flex-col w-full justify-center col-span-2 items-center border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
-                                <p>sd</p>
+                                <BarChart />
                             </div>
                         </div>
 
@@ -153,13 +154,6 @@ export default function Dashbaord() {
                             </div>
 
                             {/* Info */}
-                            <Info
-                                name={"Ama Yeboah"}
-                                mail={"example@gmail.com"}
-                                money={"GHC 3000.00"}
-                                request={"23/01/2023"}
-                                link={"/"}
-                            />
                             <Info
                                 name={"Ama Yeboah"}
                                 mail={"example@gmail.com"}
