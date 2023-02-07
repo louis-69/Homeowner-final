@@ -5,6 +5,11 @@ import Head from "next/head";
 import Header from "../components/header";
 import Layout from "../components/layout";
 import Link from "next/link";
+import Image from "next/image";
+import plus from "../assets/plus.png";
+import integration from "../assets/integrations.png";
+import SmallRegtangle, { Info } from "../components/dashboardshapes";
+import Bubble from "../components/bubbles";
 
 export default function Home() {
     return (
@@ -24,7 +29,7 @@ export default function Home() {
 
                 <Header title={"Admin Dashboard"} number={21} />
                 {/* Code goes into the main tag */}
-                <main className="bg-[#FAFAFA]">
+                <main className="bg-[#FAFAFA] xg:min-h-screen">
                     {/* Bottom menu */}
                     <div className="flex items-center bg-white justify-between border-b px-[5rem] py-4">
                         <div className="text-[#FA790F]">Dashbaord</div>
@@ -33,57 +38,55 @@ export default function Home() {
                         </Link>
                     </div>
 
-                    {/* Welconme messgae */}
-                    <p className="flex items-center px-[5rem] py-4">
-                        Welcome to your dashboard🎉
-                    </p>
-
-                    {/* First row of boxes */}
-                    <div className="flex flex-row  gap-x-8 h-[8.75rem] px-[5rem] mb-10 w-full">
-                        <div className="flex flex-col justify-center items-center basis-52 border rounded-lg bg-white shadow-[0_0_10px_rgba(0,0,0,0.07)]">
-                            <p className="mb-2">as</p>
-                            <p>as</p>
+                    <section className="px-[5rem] xg:px-[10rem]">
+                        {/* Welconme messgae */}
+                        <p className="py-4">Welcome to your dashboard🎉</p>
+                        {/* First Row */}
+                        <div className="grid grid-cols-4 gap-x-8 w-[90%] h-[8.75rem] mb-10">
+                            <SmallRegtangle
+                                number={230}
+                                description={"Total Requests"}
+                            />
+                            <SmallRegtangle
+                                number={"GHC 2300"}
+                                description={"Total Money Sent"}
+                            />
+                            <SmallRegtangle
+                                number={230}
+                                description={"Total Requests"}
+                            />
+                            <div className="flex flex-col justify-center items-center basis-52 border rounded-lg bg-white shadow-[0_0_10px_rgba(0,0,0,0.07)]">
+                                <p className="flex flex-row gap-4 mb-2">
+                                    <Image src={plus} alt={""} />
+                                    <Image src={integration} alt={""} />
+                                </p>
+                                <p className="font-normal text-xs text-slate-400">
+                                    Add Integration
+                                </p>
+                            </div>
                         </div>
 
-                        <div className="flex flex-col justify-center items-center basis-52 border rounded-lg bg-white shadow-[0_0_10px_rgba(0,0,0,0.07)]">
-                            <p className="mb-2">as</p>
-                            <p>as</p>
+                        {/* Second Row */}
+                        <div className="flex flex-row h-[19.376rem] mb-10">
+                            <div className="flex flex-col w-[39%] justify-center items-center mr-2.5 justify-between py-6 border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
+                                <p>a</p>
+                                <p>w</p>
+                                <p>a</p>
+                            </div>
+
+                            <div className="flex flex-col w-[38%] justify-center items-center mr-4 justify-between py-6 border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
+                                <p>a</p>
+                                <p>w</p>
+                                <p>a</p>
+                            </div>
+                            <div className="flex flex-col w-full justify-center col-span-2 items-center border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
+                                <p>sd</p>
+                            </div>
                         </div>
 
-                        <div className="flex flex-col justify-center items-center basis-52 border rounded-lg bg-white shadow-[0_0_10px_rgba(0,0,0,0.07)]">
-                            <p className="mb-2">as</p>
-                            <p>as</p>
-                        </div>
-
-                        <div className="flex flex-col justify-center items-center basis-52 border rounded-lg bg-white shadow-[0_0_10px_rgba(0,0,0,0.07)]">
-                            <p className="mb-2">as</p>
-                            <p>as</p>
-                        </div>
-                    </div>
-
-                    {/* Second set of boxes */}
-                    <div className="flex flex-row  h-[19.376rem] mb-10 px-[5rem]">
-                        <div className="flex flex-col justify-center items-center justify-between mr-2.5 basis-52 border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
-                            <p>sd</p>
-                            <p>sd</p>
-                            <p>sd</p>
-                        </div>
-
-                        <div className="flex flex-col justify-center items-center justify-between mr-5 basis-52 border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
-                            <p>sd</p>
-                            <p>sd</p>
-                            <p>sd</p>
-                        </div>
-
-                        <div className="flex flex-col justify-center items-center basis-[33.125rem] border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
-                            <p>sd</p>
-                        </div>
-                    </div>
-
-                    {/* Third row */}
-                    <div className="flex flex-row h-[16.8125rem] px-[5rem] mb-10 ">
-                        <div className="basis-[60.5rem]  border rounded-lg bg-white shadow-[0_4px_20px_rgba(171,171,171,0.25)]">
-                            <div className="flex justify-between px-5 pt-5">
+                        {/* Third row */}
+                        <div className="h-[16.8125rem] mb-10 border rounded-lg bg-white px-4 shadow-[0_4px_20px_rgba(171,171,171,0.25)] overflow-auto">
+                            <div className="flex flex-row justify-between px-5 py-5">
                                 <p className="font-medium">
                                     Today's Pending Approvals
                                 </p>
@@ -95,44 +98,41 @@ export default function Home() {
                                 </Link>
                             </div>
 
-                            <table className="table-auto flex flex-col px-10 pt-2.5">
-                                <thead>
-                                    <tr className="flex justify-between justify-center">
-                                        <th>Name</th>
-                                        <th>Amount Requested</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
+                            <div className="grid grid-cols-3 items-center">
+                                <p className="text-[#747A80] text-sm font-bold flex justify-center">
+                                    Name
+                                </p>
+                                <p className="text-[#747A80] text-sm font-bold flex justify-center">
+                                    Amount requested
+                                </p>
+                            </div>
 
-                                <tbody>
-                                    <tr className="flex justify-between border-b">
-                                        <td>
-                                            <p>Ama Yeboad</p>
-                                            <p>exammple@gmail.com</p>
-                                        </td>
-                                        <td>
-                                            <p>GHC 3000.00</p>
-                                            <p>Requested on 23/04/2022</p>
-                                        </td>
-                                        <td>
-                                            <Link href={""}>
-                                                <button
-                                                    type="button"
-                                                    className="text-white bg-[#D0650D]  font-medium rounded-lg text-sm px-5 py-1 mr-2 mb-2"
-                                                >
-                                                    View
-                                                </button>
-                                            </Link>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
+                            {/* Info */}
+                            <Info
+                                name={"Ama Yeboah"}
+                                mail={"example@gmail.com"}
+                                money={"GHC 3000.00"}
+                                request={"23/01/2023"}
+                                link={"/"}
+                            />
+                            <Info
+                                name={"Ama Yeboah"}
+                                mail={"example@gmail.com"}
+                                money={"GHC 3000.00"}
+                                request={"23/01/2023"}
+                                link={"/"}
+                            />
+                            <Info
+                                name={"Ama Yeboah"}
+                                mail={"example@gmail.com"}
+                                money={"GHC 3000.00"}
+                                request={"23/01/2023"}
+                                link={"/"}
+                            />
                         </div>
-                    </div>
 
-                    {/* Fourth row */}
-                    <div className="flex flex-row h-[12.625rem] px-[5rem] mb-10">
-                        <div className="basis-[60.5rem]  border rounded-lg bg-white shadow-[0_4px_20px_rgba(171,171,171,0.25)]">
+                        {/* Fourth row */}
+                        <div className="h-[12.525rem] mb-10 border rounded-lg bg-white px-4 shadow-[0_4px_20px_rgba(171,171,171,0.25)]">
                             <div className="flex justify-between px-5 pt-5">
                                 <p className="font-medium">Report Summary</p>
                                 <Link
@@ -142,20 +142,63 @@ export default function Home() {
                                     See in detail
                                 </Link>
                             </div>
+                            <div className="flex justify-between px-7 pt-10">
+                                <div className="basis-[17.375rem] h-20 border boreder-[#FEFEFE] rounded-xl flex">
+                                    <div className="w-[5%] h-full bg-[#3ABBD4] border rounded-l-xl">
+                                        {/* Blue color  */}
+                                    </div>
 
-                            <div className="flex flex-row justify-between px-7 pt-8">
-                                <div className="basis-[17.375rem] h-20 border boreder-[#FEFEFE] rounded-xl flex items-center justify-center">
-                                    asd
+                                    <div className="flex flex-col mt-2 w-full px-2 h-6">
+                                        <div className="flex flex-row justify-between">
+                                            <p className="text-[#747A80]">
+                                                Loan Status
+                                            </p>
+                                            <Bubble name={"Pending"} />
+                                        </div>
+                                        <p className="flex item-center justify-center mt-2 text-2xl font-semibold">
+                                            240
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="basis-[17.375rem] h-20 border boreder-[#FEFEFE] rounded-xl flex items-center justify-center">
-                                    asd
+
+                                <div className="basis-[17.375rem] h-20 border boreder-[#FEFEFE] rounded-xl flex">
+                                    <div className="w-[5%] h-full bg-[#3ABBD4] border rounded-l-xl">
+                                        {/* Blue color  */}
+                                    </div>
+
+                                    <div className="flex flex-col mt-2 w-full px-2 h-6">
+                                        <div className="flex flex-row justify-between">
+                                            <p className="text-[#747A80]">
+                                                Loan Status
+                                            </p>
+                                            <Bubble name={"Paid"} />
+                                        </div>
+                                        <p className="flex item-center justify-center mt-2 text-2xl font-semibold">
+                                            240
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="basis-[17.375rem] h-20 border boreder-[#FEFEFE] rounded-xl flex items-center justify-center">
-                                    asd
+
+                                <div className="basis-[17.375rem] h-20 border boreder-[#FEFEFE] rounded-xl flex">
+                                    <div className="w-[5%] h-full bg-[#3ABBD4] border rounded-l-xl">
+                                        {/* Blue color  */}
+                                    </div>
+
+                                    <div className="flex flex-col mt-2 w-full px-2 h-6">
+                                        <div className="flex flex-row justify-between">
+                                            <p className="text-[#747A80]">
+                                                Loan Status
+                                            </p>
+                                            <Bubble name={"Rejected"} />
+                                        </div>
+                                        <p className="flex item-center justify-center mt-2 text-2xl font-semibold">
+                                            240
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </section>
                 </main>
             </Layout>
         </>

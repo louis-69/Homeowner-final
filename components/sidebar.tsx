@@ -23,7 +23,7 @@ function SideBar() {
                 className="fixed h-full w-[16rem] flex-shrink-0 basis-[16rem] "
                 aria-label="Sidebar"
             >
-                <aside className="px-3 py-4 overflow-y-auto bg-[#d0650d]  lg:h-full no-scrollbar">
+                <aside className="sidecolor px-3 py-4 overflow-y-auto   lg:h-full no-scrollbar">
                     <div className="h-11 w-20 ml-14 mt-10 mb-7">
                         <Link href={"/"}>
                             <Image src={Logo} alt="Logo" />

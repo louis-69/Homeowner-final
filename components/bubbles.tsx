@@ -12,6 +12,8 @@ export default function Bubble(props: bubbleProp) {
             ? "bg-[#FFE0E0] text-[#D30000] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg"
             : props.name === "Paid"
             ? "bg-[#CDFFCD] text-[#007F00] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg"
+            : props.name === "Pending"
+            ? "bg-[#FFECCC] text-[#965E00] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg"
             : "text-black text-sm font-medium mr-2 px-3 py-0.5 rounded-lg";
     return (
         <>

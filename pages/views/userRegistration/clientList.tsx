@@ -49,7 +49,7 @@ export default function ClientList() {
 
                     <div className="px-[5rem]">
                         <Tabs>
-                            <div className="flex items-end  h-[4.6rem] justify-between">
+                            <div className="flex items-end h-[4.6rem] justify-between">
                                 <TabList className="flex flex-row gap-x-4 ">
                                     <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
                                         All Clients

@@ -1,10 +1,16 @@
 /* eslint-disable require-jsdoc */
+import Link from "next/link";
 import React from "react";
 type dashboardProp = {
     number?: number | string;
     description?: string;
     percentage?: number | string;
     amount?: number | string;
+    name?: string;
+    mail?: string;
+    money?: string;
+    request?: string;
+    link?: any;
 };
 
 function SmallRegtangle(props: dashboardProp) {
@@ -18,12 +24,29 @@ function SmallRegtangle(props: dashboardProp) {
     );
 }
 
-function LargeRegtangle(props: dashboardProp) {
+function Info(props: dashboardProp) {
     return (
-        <div className="flex flex-col justify-center items-center justify-between mr-2.5 py-6 basis-52 border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
-            <p>{props.description}</p>
-            <p>{props.percentage}</p>
-            <p>{props.amount}</p>
+        <div className="grid grid-cols-3 items-center h-16 bg-white border-b mb-4 overflow-auto">
+            <div>
+                <p className="flex justify-center">{props.name}</p>
+                <p className="flex justify-center text-sm font-normal text-[#6568A4]">
+                    {props.mail}
+                </p>
+            </div>
+            <div>
+                <p className="flex justify-center">{props.money}</p>
+                <p className="text-sm font-normal text-[#ABABAF] flex justify-center ">
+                    Reuqested on {props.request}
+                </p>
+            </div>
+            <Link href={props.link} className="flex justify-end">
+                <button
+                    type="button"
+                    className="text-white bg-[#D0650D]  font-medium rounded-lg text-sm px-10 py-1 mr-2 mb-2"
+                >
+                    View
+                </button>
+            </Link>
         </div>
     );
 }
@@ -37,4 +60,4 @@ function Bubble(props: dashboardProp) {
 }
 
 export default SmallRegtangle;
-export { LargeRegtangle, Bubble };
+export { Bubble, Info };
