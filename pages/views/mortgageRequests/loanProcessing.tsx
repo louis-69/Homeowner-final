@@ -4,7 +4,7 @@ import Head from "next/head";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Layout from "../../../components/layout";
 import Header from "../../../components/header";
-export default function Loan() {
+export default function LoanProcessing() {
     return (
         <>
             <Layout>
