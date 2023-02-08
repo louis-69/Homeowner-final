@@ -15,7 +15,7 @@ import "react-circular-progressbar/dist/styles.css";
 import BarChart from "../../components/barChat";
 
 export default function Dashbaord() {
-    const percentage = 65;
+    const percentage = 89;
     return (
         <>
             <Layout>
@@ -115,7 +115,7 @@ export default function Dashbaord() {
                                                 })`,
                                             },
                                             text: {
-                                                fill: "#000",
+                                                fill: "#ffffff",
                                                 fontSize: "30px",
                                             },
                                         }}

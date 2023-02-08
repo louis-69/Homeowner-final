@@ -10,6 +10,7 @@ import BankInformation from "./bankInformation";
 import BusinessInformation from "./businessInformation";
 import EmergencyInformation from "./emergencyInformation";
 import PersonalInformation from "./personalInformation";
+import "react-tabs/style/react-tabs.css";
 
 export default function Detail() {
     return (
@@ -44,18 +45,18 @@ export default function Detail() {
                     </div>
 
                     <Tabs>
-                        <div className="flex items-end  h-[4.6rem] justify-between  px-[5rem]">
+                        <div className="flex items-end h-[4.6rem] justify-between px-[5rem]">
                             <TabList className="flex flex-row gap-x-[8rem] ">
-                                <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
+                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
                                     Personal Information
                                 </Tab>
-                                <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
+                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
                                     Business Information
                                 </Tab>
-                                <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
+                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
                                     Bank Information
                                 </Tab>
-                                <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
+                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
                                     Emergency Information
                                 </Tab>
                             </TabList>

@@ -8,6 +8,7 @@ import Link from "next/link";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import BusinessForm from "./forms/business";
 import PersonalForm from "./forms/personal";
+import "react-tabs/style/react-tabs.css";
 
 export default function FormPage() {
     return (
@@ -46,11 +47,11 @@ export default function FormPage() {
 
                     <Tabs>
                         <div className="flex items-end  h-[4.6rem] justify-between px-[5rem]">
-                            <TabList className="flex flex-row gap-x-[8rem] ">
-                                <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
+                            <TabList className="flex flex-row gap-x-[10rem] ">
+                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
                                     Personal Information
                                 </Tab>
-                                <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
+                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
                                     Business Information
                                 </Tab>
                             </TabList>

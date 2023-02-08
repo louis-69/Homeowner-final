@@ -9,6 +9,7 @@ import Image from "next/image";
 import trash from "../../../assets/trash.png";
 import notify from "../../../assets/mail.png";
 import Bubble from "../../../components/bubbles";
+import "react-tabs/style/react-tabs.css";
 
 export default function ClientList() {
     const [isChecked, setIsChecked] = useState(false);
@@ -49,12 +50,12 @@ export default function ClientList() {
 
                     <div className="px-[5rem]">
                         <Tabs>
-                            <div className="flex items-end h-[4.6rem] justify-between">
+                            <div className="flex items-end h-[4.6rem] justify-between border-b-2">
                                 <TabList className="flex flex-row gap-x-4 ">
-                                    <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
                                         All Clients
                                     </Tab>
-                                    <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
                                         Borrowers
                                     </Tab>
                                 </TabList>

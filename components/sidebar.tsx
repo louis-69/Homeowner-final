@@ -20,11 +20,11 @@ function SideBar() {
     return (
         <>
             <aside
-                className="fixed h-full w-[16rem] flex-shrink-0 basis-[16rem] "
+                className="fixed h-full w-[16rem] flex-shrink-0"
                 aria-label="Sidebar"
             >
-                <aside className="sidecolor px-3 py-4 overflow-y-auto   lg:h-full no-scrollbar">
-                    <div className="h-11 w-20 ml-14 mt-10 mb-7">
+                <aside className="sidecolor py-4 overflow-y-auto lg:h-full no-scrollbar">
+                    <div className="h-11 w-20 ml-20 mt-10 mb-7">
                         <Link href={"/"}>
                             <Image src={Logo} alt="Logo" />
                         </Link>
@@ -59,7 +59,7 @@ function SideBar() {
                             <List icon={percent} name={"Rates"} />
                         </Link>
                         <Title name={"Other"} />
-                        <Link href={""}>
+                        <Link href={"/views/other/settings"}>
                             <List icon={Settings} name={"Settings"} />
                         </Link>
                         <Link href={""}>
@@ -69,9 +69,11 @@ function SideBar() {
                             {" "}
                             <List icon={Support} name={"Support"} />
                         </Link>
-                        <Link href={""}>
-                            <List icon={Logout} name={"Logout"} />
-                        </Link>
+                        <div>
+                            <Link href={""}>
+                                <List icon={Logout} name={"Logout"} />
+                            </Link>
+                        </div>
                     </ul>
                 </aside>
             </aside>

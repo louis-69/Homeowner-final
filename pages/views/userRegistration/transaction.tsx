@@ -7,6 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import zenith from "../../../assets/zenith.jpg";
+import "react-tabs/style/react-tabs.css";
 
 export default function ClientList() {
     return (
@@ -45,15 +46,17 @@ export default function ClientList() {
 
                     <div className="px-[5rem]">
                         <Tabs>
-                            <div className="flex items-end  h-[4.6rem] justify-between">
+                            <div className="flex items-end  h-[4.6rem] justify-between border-b-2">
                                 <TabList className="flex flex-row gap-x-20">
-                                    <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
                                         All Transaction
                                     </Tab>
-                                    <Tab className="active:border-b focus:underline focus:decoration-[#FA790F] focus:text-[#FA790F]">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
                                         Sent
                                     </Tab>
-                                    <Tab>Received</Tab>
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
+                                        Received
+                                    </Tab>
                                 </TabList>
 
                                 <div>
@@ -119,11 +122,13 @@ export default function ClientList() {
                                 </p>
                                 <div className="flex flex-row items-center justify-between border  min-h-[5.62rem] bg-white px-4">
                                     <div className="flex flex-row">
-                                        <Image
-                                            src={zenith}
-                                            alt={""}
-                                            className="w-10 mr-2"
-                                        />
+                                        <div>
+                                            <Image
+                                                src={zenith}
+                                                alt={""}
+                                                className="w-10 mr-2"
+                                            />
+                                        </div>
                                         <div>
                                             <p className="font-semibold">
                                                 Money transfer to Kofi Ansah
