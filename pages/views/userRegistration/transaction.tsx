@@ -1,5 +1,5 @@
 /* eslint-disable require-jsdoc */
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
 import Header from "../../../components/header";
 import Layout from "../../../components/layout";
@@ -8,8 +8,39 @@ import Image from "next/image";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import zenith from "../../../assets/zenith.jpg";
 import "react-tabs/style/react-tabs.css";
+import fidelity from "../../../assets/fidelity.png";
+import HM from "../../../assets/HM.png";
+import pdf from "../../../assets/pdf.png";
+import print from "../../../assets/print.png";
+import Modal from "react-modal";
+import transact from "../../../assets/transaction.png";
 
 export default function ClientList() {
+    const [modalIsOpen, setModalIsOpen] = useState(false);
+
+    const openModal = () => {
+        setModalIsOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalIsOpen(false);
+    };
+
+    const customStyles = {
+        content: {
+            top: "50%",
+            left: "50%",
+            right: "auto",
+            bottom: "auto",
+            marginRight: "-50%",
+            transform: "translate(-50%, -50%)",
+            padding: "0",
+            width: "500px",
+            height: "auto",
+            borderRadius: "8px 8px 8px 8px",
+            backgroundColor: "white",
+        },
+    };
     return (
         <>
             <Layout>
@@ -27,7 +58,7 @@ export default function ClientList() {
 
                 <Header title={"Transactions"} number={5} />
                 {/* Code goes into the main tag */}
-                <main className="bg-[#FAFAFA] min-h-screen">
+                <main className="bg-[#FAFAFA]  grow pb-10">
                     {/* Bottom menu */}
                     <div className="flex items-center bg-white justify-between border-b px-[5rem] py-3">
                         <div className="text-[#FA790F]">
@@ -48,7 +79,7 @@ export default function ClientList() {
                         <Tabs>
                             <div className="flex items-end  h-[4.6rem] justify-between border-b-2">
                                 <TabList className="flex flex-row gap-x-20">
-                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8 focus:none">
                                         All Transaction
                                     </Tab>
                                     <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
@@ -116,7 +147,145 @@ export default function ClientList() {
                                 </div>
                             </div>
 
+                            {/* Modal */}
+                            <Modal
+                                isOpen={modalIsOpen}
+                                onRequestClose={closeModal}
+                                ariaHideApp={false}
+                                overlayClassName=""
+                                style={customStyles}
+                            >
+                                <div className="flex items-center justify-between p-2 px-4 h-12 font-medium w-full text-white bg-[#D0650D]">
+                                    <h2>Transaction receipt</h2>
+                                    <button
+                                        className="border rounded-full w-5 h-5 bg-[#FA790F]"
+                                        onClick={closeModal}
+                                    >
+                                        <p className="absolute top-[0.69rem] right-[1.34rem] font-normal">
+                                            X
+                                        </p>
+                                    </button>
+                                </div>
+                                <div className="flex flex-col items-center justify-center mt-4">
+                                    <Image
+                                        src={transact}
+                                        alt={""}
+                                        className="w-52 h-52 mb-2"
+                                    />
+                                    <h1>GHC 2000.00 to Kofi Ansah</h1>
+                                    <p className="text-[#828187] text-sm mb-2">
+                                        Completed Friday, 28th April
+                                    </p>
+                                </div>
+                                <div className="bg-[#D0650D] flex flex-col gap-y-4 px-4 text-white h-auto text-sm">
+                                    <div className="flex items-center mt-4 justify-between">
+                                        <p>Transfer</p>
+                                        <p>#233394</p>
+                                    </div>
+                                    <div className="flex items-center justify-between">
+                                        <p>Sent to</p>
+                                        <p>Kofi Ansah</p>
+                                    </div>
+                                    <div className="flex items-center justify-between">
+                                        <p>Account number</p>
+                                        <p>2100034454</p>
+                                    </div>
+                                    <div className="flex items-center justify-between">
+                                        <p>Card number</p>
+                                        <p>********43531</p>
+                                    </div>
+                                    <div className="flex items-center justify-between">
+                                        <p>Amount sent</p>
+                                        <p>GHC 104,800.00</p>
+                                    </div>
+                                    <div className="flex items-center justify-between">
+                                        <p>Amount return</p>
+                                        <p>GHC 105,100.00</p>
+                                    </div>
+                                    <div className="flex flex-row justify-between py-4">
+                                        <button className="flex gap-x-1">
+                                            <Image
+                                                src={pdf}
+                                                alt={""}
+                                                className="mt-1"
+                                            />
+                                            <span>Download</span>
+                                        </button>
+                                        <button className="flex gap-x-1">
+                                            <Image
+                                                src={print}
+                                                alt={""}
+                                                className="mt-1"
+                                            />
+                                            <span>Print</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </Modal>
+
                             <TabPanel>
+                                <p className="text-[#ABABAF] mt-7 mb-2.5">
+                                    30th April
+                                </p>
+                                <button
+                                    className="flex flex-row items-center justify-between w-full border  min-h-[5.62rem] bg-white px-4"
+                                    onClick={openModal}
+                                >
+                                    <div className="flex flex-row">
+                                        <div>
+                                            <Image
+                                                src={zenith}
+                                                alt={""}
+                                                className="w-10 mr-2 mt-1"
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold">
+                                                Money transfer to Kofi Ansah
+                                            </p>
+                                            <p className="text-[#828187] flex">
+                                                Bank transfer
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className="font-semibold">
+                                            - GHC 10,480.00
+                                        </p>
+                                        <p className="text-[#828187] text-sm">
+                                            30 Aug, 3:01pm
+                                        </p>
+                                    </div>
+                                </button>
+                                <div className="flex flex-row items-center justify-between border  min-h-[5.62rem] bg-white px-4">
+                                    <div className="flex flex-row">
+                                        <div>
+                                            <Image
+                                                src={HM}
+                                                alt={""}
+                                                className="w-10 mr-2 mt-1"
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold">
+                                                Money transfer to Hamida Mahama
+                                            </p>
+                                            <p className="text-[#828187]">
+                                                Cash
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className="font-semibold">
+                                            - GHC 10,480.00
+                                        </p>
+                                        <p className="text-[#828187] text-sm">
+                                            30 Aug, 3:01pm
+                                        </p>
+                                    </div>
+                                </div>
+
+                                {/* Second section */}
                                 <p className="text-[#ABABAF] mt-7 mb-2.5">
                                     30th April
                                 </p>
@@ -124,9 +293,36 @@ export default function ClientList() {
                                     <div className="flex flex-row">
                                         <div>
                                             <Image
+                                                src={fidelity}
+                                                alt={""}
+                                                className="w-10 mr-2 mt-1"
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold">
+                                                Money transfer to Ama Yeboah
+                                            </p>
+                                            <p className="text-[#828187]">
+                                                Quickpay fidelity
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className="font-semibold">
+                                            - GHC 10,480.00
+                                        </p>
+                                        <p className="text-[#828187] text-sm">
+                                            30 Aug, 3:01pm
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-row items-center justify-between border  min-h-[5.62rem] bg-white px-4">
+                                    <div className="flex flex-row">
+                                        <div>
+                                            <Image
                                                 src={zenith}
                                                 alt={""}
-                                                className="w-10 mr-2"
+                                                className="w-10 mr-2 mt-1"
                                             />
                                         </div>
                                         <div>
@@ -149,15 +345,157 @@ export default function ClientList() {
                                 </div>
                                 <div className="flex flex-row items-center justify-between border  min-h-[5.62rem] bg-white px-4">
                                     <div className="flex flex-row">
-                                        <Image
-                                            src={zenith}
-                                            alt={""}
-                                            className="w-10 mr-2"
-                                        />
+                                        <div>
+                                            <Image
+                                                src={zenith}
+                                                alt={""}
+                                                className="w-10 mr-2 mt-1"
+                                            />
+                                        </div>
                                         <div>
                                             <p className="font-semibold">
-                                                Money received from Hamida
-                                                Mahama
+                                                Money transfer to Kofi Ansah
+                                            </p>
+                                            <p className="text-[#828187]">
+                                                Bank transfer
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className="font-semibold">
+                                            - GHC 10,480.00
+                                        </p>
+                                        <p className="text-[#828187] text-sm">
+                                            30 Aug, 3:01pm
+                                        </p>
+                                    </div>
+                                </div>
+                            </TabPanel>
+
+                            <TabPanel>
+                                <div className="flex flex-row items-center justify-between border  min-h-[5.62rem] bg-white px-4 mt-8">
+                                    <div className="flex flex-row">
+                                        <div>
+                                            <Image
+                                                src={zenith}
+                                                alt={""}
+                                                className="w-10 mr-2 mt-1"
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold">
+                                                Money transfer to Kofi Ansah
+                                            </p>
+                                            <p className="text-[#828187]">
+                                                Bank transfer
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className="font-semibold">
+                                            - GHC 10,480.00
+                                        </p>
+                                        <p className="text-[#828187] text-sm">
+                                            30 Aug, 3:01pm
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-row items-center justify-between border  min-h-[5.62rem] bg-white px-4">
+                                    <div className="flex flex-row">
+                                        <div>
+                                            <Image
+                                                src={zenith}
+                                                alt={""}
+                                                className="w-10 mr-2 mt-1"
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold">
+                                                Money transfer to Kofi Ansah
+                                            </p>
+                                            <p className="text-[#828187]">
+                                                Bank transfer
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className="font-semibold">
+                                            - GHC 10,480.00
+                                        </p>
+                                        <p className="text-[#828187] text-sm">
+                                            30 Aug, 3:01pm
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-row items-center justify-between border  min-h-[5.62rem] bg-white px-4">
+                                    <div className="flex flex-row">
+                                        <div>
+                                            <Image
+                                                src={zenith}
+                                                alt={""}
+                                                className="w-10 mr-2 mt-1"
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold">
+                                                Money transfer to Kofi Ansah
+                                            </p>
+                                            <p className="text-[#828187]">
+                                                Bank transfer
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className="font-semibold">
+                                            - GHC 10,480.00
+                                        </p>
+                                        <p className="text-[#828187] text-sm">
+                                            30 Aug, 3:01pm
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-row items-center justify-between border  min-h-[5.62rem] bg-white px-4">
+                                    <div className="flex flex-row">
+                                        <div>
+                                            <Image
+                                                src={zenith}
+                                                alt={""}
+                                                className="w-10 mr-2 mt-1"
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold">
+                                                Money transfer to Kofi Ansah
+                                            </p>
+                                            <p className="text-[#828187]">
+                                                Bank transfer
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className="font-semibold">
+                                            - GHC 10,480.00
+                                        </p>
+                                        <p className="text-[#828187] text-sm">
+                                            30 Aug, 3:01pm
+                                        </p>
+                                    </div>
+                                </div>
+                            </TabPanel>
+
+                            <TabPanel>
+                                <div className="flex flex-row items-center justify-between border mt-8 min-h-[5.62rem] bg-white px-4">
+                                    <div className="flex flex-row">
+                                        <div>
+                                            <Image
+                                                src={HM}
+                                                alt={""}
+                                                className="w-10 mr-2 mt-1"
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold">
+                                                Money transfer to Hamida Mahama
                                             </p>
                                             <p className="text-[#828187]">
                                                 Cash
@@ -166,19 +504,95 @@ export default function ClientList() {
                                     </div>
                                     <div>
                                         <p className="font-semibold">
-                                            + GHC 10,480.00
+                                            - GHC 10,480.00
                                         </p>
                                         <p className="text-[#828187] text-sm">
-                                            28 Aug, 3:01pm
+                                            30 Aug, 3:01pm
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-row items-center justify-between border  min-h-[5.62rem] bg-white px-4">
+                                    <div className="flex flex-row">
+                                        <div>
+                                            <Image
+                                                src={fidelity}
+                                                alt={""}
+                                                className="w-10 mr-2 mt-1"
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold">
+                                                Money transfer to Ama Yeboah
+                                            </p>
+                                            <p className="text-[#828187]">
+                                                Quickpay fidelity
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className="font-semibold">
+                                            - GHC 10,480.00
+                                        </p>
+                                        <p className="text-[#828187] text-sm">
+                                            30 Aug, 3:01pm
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-row items-center justify-between border min-h-[5.62rem] bg-white px-4">
+                                    <div className="flex flex-row">
+                                        <div>
+                                            <Image
+                                                src={HM}
+                                                alt={""}
+                                                className="w-10 mr-2 mt-1"
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold">
+                                                Money transfer to Hamida Mahama
+                                            </p>
+                                            <p className="text-[#828187]">
+                                                Cash
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className="font-semibold">
+                                            - GHC 10,480.00
+                                        </p>
+                                        <p className="text-[#828187] text-sm">
+                                            30 Aug, 3:01pm
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="flex flex-row items-center justify-between border  min-h-[5.62rem] bg-white px-4">
+                                    <div className="flex flex-row">
+                                        <div>
+                                            <Image
+                                                src={fidelity}
+                                                alt={""}
+                                                className="w-10 mr-2 mt-1"
+                                            />
+                                        </div>
+                                        <div>
+                                            <p className="font-semibold">
+                                                Money transfer to Ama Yeboah
+                                            </p>
+                                            <p className="text-[#828187]">
+                                                Quickpay fidelity
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <p className="font-semibold">
+                                            - GHC 10,480.00
+                                        </p>
+                                        <p className="text-[#828187] text-sm">
+                                            30 Aug, 3:01pm
                                         </p>
                                     </div>
                                 </div>
                             </TabPanel>
-
-                            <TabPanel>
-                                <h2>Any content 2</h2>
-                            </TabPanel>
-                            <TabPanel>3</TabPanel>
                         </Tabs>
                     </div>
                 </main>

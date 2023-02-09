@@ -75,7 +75,7 @@ export default function Rates() {
 
                 <Header title={"Mortgage Requests"} number={5} />
                 {/* Code goes into the main tag */}
-                <main className="bg-[#FAFAFA] min-h-screen">
+                <main className="bg-[#FAFAFA] grow pb-10">
                     {/* Bottom menu */}
                     <div className="flex items-center bg-white justify-between border-b px-[5rem] py-2">
                         <div className="text-[#FA790F]">
@@ -177,6 +177,234 @@ export default function Rates() {
                             modified={"Last modified: 23/01/2023"}
                             interest={5.25}
                             percentage={5.33}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
+                        />
+                        <MortgageHeader
+                            product={"10-year fixed-rate"}
+                            modified={"Last modified: 23/01/2023"}
+                            interest={4.8}
+                            percentage={4.87}
                         />
                         <MortgageHeader
                             product={"10-year fixed-rate"}

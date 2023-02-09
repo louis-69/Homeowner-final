@@ -33,7 +33,7 @@ export default function Dashbaord() {
 
                 <Header title={"Admin Dashboard"} number={21} />
                 {/* Code goes into the main tag */}
-                <main className="bg-[#FAFAFA] xg:min-h-screen">
+                <main className="bg-[#FAFAFA] grow">
                     {/* Bottom menu */}
                     <div className="flex items-center bg-white justify-between border-b px-[5rem] py-4">
                         <div className="text-[#FA790F]">Dashbaord</div>
@@ -72,7 +72,7 @@ export default function Dashbaord() {
 
                         {/* Second Row */}
                         <div className="flex flex-row h-[19.376rem] mb-10">
-                            <div className="flex flex-col w-[39%] justify-center items-center mr-2.5 justify-between py-6 border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
+                            <div className="flex flex-col w-[39%] items-center mr-2.5 justify-between py-6 border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
                                 <p className="text-xl font-extrabold text-[#58575F] mr-10">
                                     Approval Rate
                                 </p>
@@ -99,7 +99,7 @@ export default function Dashbaord() {
                                 </p>
                             </div>
 
-                            <div className="gradient flex flex-col w-[38%] justify-center items-center mr-4 justify-between py-6 border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
+                            <div className="gradient flex flex-col w-[38%] items-center mr-4 justify-between py-6 border rounded-lg bg-white shadow-[0_4px_58px_rgba(0,0,0,0.04)]">
                                 <p className="text-xl font-extrabold text-white mr-10">
                                     Default Rate
                                 </p>
