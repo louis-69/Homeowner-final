@@ -10,6 +10,7 @@ import plus from "../assets/plus.png";
 import integration from "../assets/integrations.png";
 import SmallRegtangle, { Info } from "../components/dashboardshapes";
 import Bubble from "../components/bubbles";
+import { Dropdown } from "flowbite-react";
 
 export default function Home() {
     return (
@@ -41,6 +42,7 @@ export default function Home() {
                     <section className="px-[5rem] xg:px-[10rem]">
                         {/* Welconme messgae */}
                         <p className="py-4">Welcome to your dashboard🎉</p>
+
                         {/* First Row */}
                         <div className="grid grid-cols-4 gap-x-8 w-[90%] h-[8.75rem] mb-10">
                             <SmallRegtangle
@@ -197,6 +199,32 @@ export default function Home() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+
+                        <div className="mb-64">
+                            <Dropdown
+                                dismissOnClick={true}
+                                label={
+                                    <div className="flex items-center">
+                                        <svg
+                                            className="w-6 h-6 mr-2"
+                                            fill="currentColor"
+                                            viewBox="0 0 20 20"
+                                        >
+                                            <path
+                                                fillRule="evenodd"
+                                                d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z"
+                                                clipRule="evenodd"
+                                            />
+                                        </svg>
+                                    </div>
+                                }
+                            >
+                                <Dropdown.Item>Dashboard</Dropdown.Item>
+                                <Dropdown.Item>Settings</Dropdown.Item>
+                                <Dropdown.Item>Earnings</Dropdown.Item>
+                                <Dropdown.Item>Sign out</Dropdown.Item>
+                            </Dropdown>
                         </div>
                     </section>
                 </main>

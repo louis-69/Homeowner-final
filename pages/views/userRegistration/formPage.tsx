@@ -28,7 +28,7 @@ export default function FormPage() {
 
                 <Header title={"User Registration"} number={5} />
                 {/* Code goes into the main tag */}
-                <main className="bg-[#FAFAFA] ">
+                <main className="bg-[#FAFAFA] grow pb-10">
                     {/* Bottom menu */}
                     <div className="flex items-center bg-white justify-between border-b px-[5rem] py-3">
                         <div className="text-[#FA790F]">

@@ -23,7 +23,7 @@ function SideBar() {
                 className="fixed h-screen w-[16rem] flex-shrink-0"
                 aria-label="Sidebar"
             >
-                <aside className="sidecolor py-4 overflow-y-scroll scroll-smooth lg:h-full no-scrollbar">
+                <aside className="sidecolor py-4 overflow-x-visible overflow-y-scroll scroll-smooth lg:h-full no-scrollbar">
                     <div className="h-11 w-20 ml-20 mt-14 mb-10">
                         <Link href={"/"}>
                             <Image src={Logo} alt="Logo" />

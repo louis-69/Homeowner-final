@@ -31,7 +31,7 @@ export default function Reports() {
                     />
                 </Head>
                 {/* Code goes into the main tag */}
-                <main className="bg-[#FAFAFA] min-h-screen">
+                <main className="bg-[#FAFAFA] grow pb-36">
                     {/* Change props to suit page*/}
                     <Header title={"Mortgage Requests"} number={21} />
                     {/* Bottom menu */}

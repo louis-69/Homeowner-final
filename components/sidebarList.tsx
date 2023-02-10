@@ -11,7 +11,7 @@ type sideBarProp = {
 function List(props: sideBarProp) {
     return (
         <li>
-            <div className="flex items-center p-2 pl-16 text-base font-medium hover:bg-yellow-50/40 hover:border-r-2 hover:border-[#46E1FF]">
+            <div className="flex items-center p-2 pl-16  text-base font-medium hover:bg-yellow-50/40 hover:border-r-2 hover:border-[#46E1FF]">
                 <Image src={props.icon} alt="" />
                 <span className="flex-1 ml-3 whitespace-nowrap text-[#FEE4CF]">
                     {props.name}

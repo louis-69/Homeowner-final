@@ -98,7 +98,7 @@ export default function MortgageForm() {
                             </div>
                         </div>
 
-                        <div className="mt-10 float-right">
+                        <div className="my-6 float-right">
                             <Link href={""}>
                                 <button className="border border-[#D0650D] text-[#D0650D] rounded-md p-1 px-4 mr-2 hover:text-orange-300">
                                     Cancel
