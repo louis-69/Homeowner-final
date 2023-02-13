@@ -32,7 +32,9 @@
         "react-datepicker": "^4.10.0",
         "react-dom": "18.2.0",
         "react-modal": "^3.16.1",
+        "react-sparklines": "^1.7.0",
         "react-tabs": "^6.0.0",
+        "recharts": "^2.4.1",
         "sharp": "^0.31.3",
         "yup": "^0.32.11"
     },
@@ -40,6 +42,7 @@
         "@next/eslint-plugin-next": "^13.1.5",
         "@types/react-datepicker": "^4.8.0",
         "@types/react-modal": "^3.13.1",
+        "@types/react-sparklines": "^1.7.2",
         "@typescript-eslint/eslint-plugin": "^5.49.0",
         "autoprefixer": "^10.4.13",
         "eslint": "^8.32.0",

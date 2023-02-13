@@ -43,7 +43,7 @@ function SideBar() {
                         <Link href={"/views/userRegistration/transaction"}>
                             <List icon={Transaction} name={"Transaction"} />
                         </Link>
-                        <Title name={"Morgage Requests"} />
+                        <Title name={"Mortgage Requests"} />
                         <Link href={"/views/mortgageRequests/pendingApprovals"}>
                             {" "}
                             <List icon={Pending} name={"Pending Approval"} />
@@ -62,7 +62,7 @@ function SideBar() {
                         <Link href={"/views/other/settings"}>
                             <List icon={Settings} name={"Settings"} />
                         </Link>
-                        <Link href={""}>
+                        <Link href={"/views/other/integrations"}>
                             <List icon={Integration} name={"Integrations"} />
                         </Link>
                         <Link href={""}>
