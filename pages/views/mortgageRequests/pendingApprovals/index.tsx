@@ -1,12 +1,12 @@
 /* eslint-disable require-jsdoc */
 import React, { useState } from "react";
-import closebutton from "../../../assets/close.png";
+import closebutton from "../../../../assets/close.png";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import Layout from "../../../components/layout";
-import Header from "../../../components/header";
+import Layout from "../../../../components/layout";
+import Header from "../../../../components/header";
 import Modal from "react-modal";
 
 export default function PendingApprovals() {
@@ -95,15 +95,15 @@ export default function PendingApprovals() {
 
                     <div className=" pt-3 px-[5rem]">
                         <Tabs>
-                            <div className="flex items-end mb-4 h-[4.6rem] justify-between">
+                            <div className="flex items-end mb-4 h-[4.6rem] justify-between border-b-2">
                                 <TabList className="flex flex-row gap-x-32 ">
-                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8 cursor-pointer focus:none">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px]">
                                         All Requests(200)
                                     </Tab>
-                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8 cursor-pointer focus:none">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px]">
                                         Pre-approved
                                     </Tab>
-                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8 cursor-pointer focus:none">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px]">
                                         Rejected
                                     </Tab>
                                 </TabList>

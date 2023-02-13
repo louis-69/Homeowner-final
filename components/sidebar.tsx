@@ -52,7 +52,7 @@ function SideBar() {
                             {" "}
                             <List icon={loan} name={"Loan Processing"} />
                         </Link>
-                        <Link href={"/views/mortgageRequests/reports"}>
+                        <Link href={"/views/mortgageRequests/report"}>
                             <List icon={Report} name={"Report"} />
                         </Link>
                         <Link href={"/views/mortgageRequests/rates"}>
@@ -62,7 +62,7 @@ function SideBar() {
                         <Link href={"/views/other/settings"}>
                             <List icon={Settings} name={"Settings"} />
                         </Link>
-                        <Link href={"/views/other/integrations"}>
+                        <Link href={"/views/other/integration"}>
                             <List icon={Integration} name={"Integrations"} />
                         </Link>
                         <Link href={""}>

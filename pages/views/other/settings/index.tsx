@@ -2,15 +2,14 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
 import Head from "next/head";
-import Header from "../../../components/header";
-import Layout from "../../../components/layout";
+import Header from "../../../../components/header";
+import Layout from "../../../../components/layout";
 import Link from "next/link";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
-import Profile from "./forms/profile";
-import Security from "./forms/security";
-import Notification from "./forms/notification";
-import Administration from "./forms/administration";
-import "react-tabs/style/react-tabs.css";
+import Profile from "../forms/profile";
+import Security from "../forms/security";
+import Notification from "../forms/notification";
+import Administration from "../forms/administration";
 
 export default function Settings() {
     return (
@@ -49,17 +48,17 @@ export default function Settings() {
 
                     <Tabs>
                         <div className="flex items-end  h-[4.6rem] justify-between px-[5rem]">
-                            <TabList className="flex flex-row gap-x-[13rem] border-b-2 w-full">
-                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-8 focus:none">
+                            <TabList className="flex flex-row justify-around border-b-2 w-full">
+                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px] cursor-pointer">
                                     Profile
                                 </Tab>
-                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-8 focus:none">
+                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px] cursor-pointer">
                                     Security
                                 </Tab>
-                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-8 focus:none">
+                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px] cursor-pointer">
                                     Notification
                                 </Tab>
-                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-8 focus:none">
+                                <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px] cursor-pointer">
                                     Administration
                                 </Tab>
                             </TabList>

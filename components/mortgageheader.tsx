@@ -2,7 +2,10 @@
 import React from "react";
 import more from "../assets/More.png";
 import Image from "next/image";
-import { InterestRate, APR } from "../pages/views/mortgageRequests/mortgage";
+import {
+    InterestRate,
+    APR,
+} from "../pages/views/mortgageRequests/rates/mortgage";
 
 type morgageProp = {
     product: string;

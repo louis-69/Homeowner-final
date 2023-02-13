@@ -1,10 +1,10 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
 import Head from "next/head";
-import Header from "../../../components/header";
-import Layout from "../../../components/layout";
+import Header from "../../../../components/header";
+import Layout from "../../../../components/layout";
 import Link from "next/link";
-import { Percentages } from "../../../components/mortgageheader";
+import { Percentages } from "../../../../components/mortgageheader";
 
 export default function RatesForm() {
     return (

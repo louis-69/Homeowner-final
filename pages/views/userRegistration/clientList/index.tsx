@@ -1,15 +1,14 @@
 /* eslint-disable require-jsdoc */
 import React, { useState } from "react";
 import Head from "next/head";
-import Header from "../../../components/header";
-import Layout from "../../../components/layout";
+import Header from "../../../../components/header";
+import Layout from "../../../../components/layout";
 import Link from "next/link";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Image from "next/image";
-import trash from "../../../assets/trash.png";
-import notify from "../../../assets/mail.png";
-import Bubble from "../../../components/bubbles";
-import "react-tabs/style/react-tabs.css";
+import trash from "../../../../assets/trash.png";
+import notify from "../../../../assets/mail.png";
+import Bubble from "../../../../components/bubbles";
 
 export default function ClientList() {
     const [isChecked, setIsChecked] = useState(false);
@@ -39,7 +38,7 @@ export default function ClientList() {
                             <span className="text-black">/Client List</span>
                         </div>
                         <Link
-                            href={"/views/userRegistration/details"}
+                            href={"/views/userRegistration/clientList/details"}
                             className="text-[#0052FF]"
                         >
                             <button className="bg-[#D0650D] text-white rounded-md p-1 px-2">
@@ -51,11 +50,11 @@ export default function ClientList() {
                     <div className="px-[5rem]">
                         <Tabs>
                             <div className="flex items-end h-[4.6rem] justify-between border-b-2">
-                                <TabList className="flex flex-row gap-x-4 ">
-                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
+                                <TabList className="flex flex-row gap-x-32 mb-0 border-0 pb-0">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px]">
                                         All Clients
                                     </Tab>
-                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px]">
                                         Borrowers
                                     </Tab>
                                 </TabList>

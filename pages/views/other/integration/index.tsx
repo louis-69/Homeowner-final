@@ -2,12 +2,12 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
 import Head from "next/head";
-import Header from "../../../components/header";
-import Layout from "../../../components/layout";
+import Header from "../../../../components/header";
+import Layout from "../../../../components/layout";
 import Image from "next/image";
-import googleform from "../../../assets/googleform.png";
-import googlesheet from "../../../assets/google sheets.png";
-import slack from "../../../assets/slack.png";
+import googleform from "../../../../assets/googleform.png";
+import googlesheet from "../../../../assets/google sheets.png";
+import slack from "../../../../assets/slack.png";
 
 export default function Integrations() {
     return (

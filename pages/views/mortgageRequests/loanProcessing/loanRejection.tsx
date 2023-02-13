@@ -1,14 +1,14 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
 import Head from "next/head";
-import finallogo from "../../../assets/logo.png";
-import congratsimage from "../../../assets/Loan approved.png";
-import Layout from "../../../components/layout";
-import Header from "../../../components/header";
+import Layout from "../../../../components/layout";
+import Header from "../../../../components/header";
+import finallogo from "../../../../assets/logo.png";
+import loanrejection from "../../../../assets/Empty wallet.png";
 
 import Image from "next/image";
 
-export default function LoanApproval() {
+export default function Home() {
     return (
         <>
             <Layout>
@@ -34,7 +34,7 @@ export default function LoanApproval() {
                         </div>
                     </div>
 
-                    <div className="w-[600px] h-[880px] mb-20 ml-60 bg-white">
+                    <div className="w-[600px] h-[900px] m-28 bg-white">
                         <Image
                             className="pt-[30px] ml-[270px]"
                             src={finallogo}
@@ -42,30 +42,32 @@ export default function LoanApproval() {
                             alt={"Homehub logo"}
                         />
                         <h1 className="mt-[30px] text-center font-black leading-[60px] text-3xl">
-                            Congratulations!
+                            Loan Rejection
                         </h1>
 
                         <Image
                             className="pt-[30px] ml-[225px]"
-                            src={congratsimage}
+                            src={loanrejection}
                             width={193}
-                            alt={"Homehub logo"}
+                            alt={"Loan rejection image"}
                         />
 
-                        {/* loan approval message */}
+                        {/* Rejection message */}
                         <p className="w-[473px] pt-8 pl-[9rem] leading-[17px] text-[12px] ">
                             Hello Hamida,
                             <br />
                             <br />
-                            Your loan reqest has been pre-approved by Zenith
-                            Bank. Kindly make sure you go through the
-                            pre-approval letter and contract attached to this
-                            mail. It contains information about the terms and
-                            conditions of your loan.
+                            This mail is to notify you about the rejection of
+                            your loan request that you submitted to Zenith Bank.
+                            Unfortunately, you failed to fulfil the criteria
+                            that is prescribed for the loan approval at our Bank
+                            or the credentials and assets that you provided
+                            failed to be verified by our verification team.
+                            Thanks for showing interest in our loan scheme.
                             <br />
-                            Please return to this email with the completed form
-                            after filling it out and signing it, and also upload
-                            a copy to the Homehub app.
+                            <br />
+                            You may contact the concerned branch for further
+                            queries if any.
                             <br />
                             <br />
                             Loan Department
@@ -77,22 +79,24 @@ export default function LoanApproval() {
                             If you need help setting up, the Homehub customer
                             Service team is standing by. Reach out by sending an
                             email to customer@homehub.com
+                            <br />
+                            <br />
+                            The Homehub Team
                         </p>
 
-                        {/* horizontal divide */}
-                        <hr className="w-[478px] h-[1px] mx-auto my-4 bg-[#CDCDCFCC] border-0 rounded md:my-10 dark:bg-gray-700"></hr>
+                        <hr className="w-[478px] h-[1px] mx-auto my-1 bg-[#CDCDCFCC] border-0 rounded md:my-5 dark:bg-gray-700"></hr>
 
                         <p className="text-center pb-[25px] text-[12px]">
                             Sent with love from homehub.com
                         </p>
-                        <p className="text-center text-[12px]  leading-[18px] max-w-[433px]">
+                        <p className="text-center text-[12px]  leading-[18px]">
                             If you are having issues clicking the get started
                             button, copy and paste the URL below in your web
                             browser. https://homehub.com/get_started
                         </p>
 
                         <p className="text-center text-[12px] pt-[20px]">
-                            (c) 2022 Homehub . All Rights Reserved
+                            (c) 2022 Homehub . All Rights Reserveed
                         </p>
                     </div>
                 </main>

@@ -1,14 +1,14 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
 import Head from "next/head";
-import Layout from "../../../components/layout";
-import Header from "../../../components/header";
-import calendar from "../../../assets/calendar.png";
+import Layout from "../../../../components/layout";
+import Header from "../../../../components/header";
+import calendar from "../../../../assets/calendar.png";
 import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import Revenuechart from "../../../components/revenuechart";
-import Reportschart from "../../../components/reportschart";
-import Minigraphs from "../../../components/minigraphs";
+import Revenuechart from "../../../../components/revenuechart";
+import Reportschart from "../../../../components/reportschart";
+import Minigraphs from "../../../../components/minigraphs";
 import Image from "next/image";
 
 export default function Reports() {

@@ -2,10 +2,10 @@
 import React, { useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import closebutton from "../../../assets/close.png";
+import closebutton from "../../../../assets/close.png";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import Layout from "../../../components/layout";
-import Header from "../../../components/header";
+import Layout from "../../../../components/layout";
+import Header from "../../../../components/header";
 import Image from "next/image";
 import Modal from "react-modal";
 
@@ -93,13 +93,13 @@ export default function LoanProcessing() {
 
                     <div className=" pt-0 mb-20 px-[5rem]">
                         <Tabs>
-                            <div className="flex items-end mb-4 h-[4.6rem] justify-between">
+                            <div className="flex items-end mb-4 h-[4.6rem] justify-between border-b-2">
                                 {/* tabs */}
-                                <TabList className="flex flex-row gap-x-20 ">
-                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8 focus:none">
+                                <TabList className="flex flex-row gap-x-32">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px]">
                                         Pending
                                     </Tab>
-                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8 focus:none">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px]">
                                         Appointments
                                     </Tab>
                                 </TabList>

@@ -2,13 +2,15 @@
 import React from "react";
 
 export default function Notification() {
-    const [isChecked, setIsChecked] = React.useState(false);
+    // This function is triggered when the select changes
+    const selectChange = (
+        event: React.ChangeEvent<HTMLInputElement>,
+        eventTarget: string
+    ) => {
+        const { value, checked } = event.target;
 
-    const handleChange = () => {
-        setIsChecked(!isChecked);
+        console.log(`${value} is ${checked}`);
     };
-
-    console.log(isChecked);
 
     return (
         <>
@@ -23,17 +25,21 @@ export default function Notification() {
                                 <label className="relative inline-flex items-center cursor-pointer">
                                     <input
                                         type="checkbox"
-                                        name="1 boy"
-                                        value=""
-                                        checked={isChecked}
-                                        onChange={handleChange}
+                                        value="1"
+                                        name="switch"
+                                        onChange={(event) =>
+                                            selectChange(
+                                                event,
+                                                event.target.tagName
+                                            )
+                                        }
                                         className="sr-only peer"
                                     />
                                     <div
-                                        className="w-16 h-6 bg-gray-200 rounded-full peer 
-                                peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
-                                after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
-                                peer-checked:bg-blue-600"
+                                        className="w-16 h-6 bg-zinc-600 rounded-full peer 
+                                        peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
+                                        after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
+                                        peer-checked:bg-cyan-400"
                                     ></div>
                                 </label>
                             </div>
@@ -44,15 +50,21 @@ export default function Notification() {
                                 <label className="relative inline-flex items-center cursor-pointer">
                                     <input
                                         type="checkbox"
-                                        name="1 boy"
-                                        value=""
+                                        value="2"
+                                        name="switch"
+                                        onChange={(event) =>
+                                            selectChange(
+                                                event,
+                                                event.target.tagName
+                                            )
+                                        }
                                         className="sr-only peer"
                                     />
                                     <div
-                                        className="w-16 h-6 bg-gray-200 rounded-full peer 
-                                peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
-                                after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
-                                peer-checked:bg-blue-600"
+                                        className="w-16 h-6 bg-zinc-600 rounded-full peer 
+                                        peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
+                                        after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
+                                        peer-checked:bg-cyan-400"
                                     ></div>
                                 </label>
                             </div>
@@ -63,15 +75,21 @@ export default function Notification() {
                                 <label className="relative inline-flex items-center cursor-pointer">
                                     <input
                                         type="checkbox"
-                                        name="1 boy"
-                                        value=""
+                                        value="3"
+                                        name="switch"
+                                        onChange={(event) =>
+                                            selectChange(
+                                                event,
+                                                event.target.tagName
+                                            )
+                                        }
                                         className="sr-only peer"
                                     />
                                     <div
-                                        className="w-16 h-6 bg-gray-200 rounded-full peer 
-                                peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
-                                after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
-                                peer-checked:bg-blue-600"
+                                        className="w-16 h-6 bg-zinc-600 rounded-full peer 
+                                        peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
+                                        after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
+                                        peer-checked:bg-cyan-400"
                                     ></div>
                                 </label>
                             </div>
@@ -84,15 +102,21 @@ export default function Notification() {
                                 <label className="relative inline-flex items-center cursor-pointer">
                                     <input
                                         type="checkbox"
-                                        name="1 boy"
-                                        value=""
+                                        value="4"
+                                        name="switch"
+                                        onChange={(event) =>
+                                            selectChange(
+                                                event,
+                                                event.target.tagName
+                                            )
+                                        }
                                         className="sr-only peer"
                                     />
                                     <div
-                                        className="w-16 h-6 bg-gray-200 rounded-full peer 
-                                peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
-                                after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
-                                peer-checked:bg-blue-600"
+                                        className="w-16 h-6 bg-zinc-600 rounded-full peer 
+                                        peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
+                                        after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
+                                        peer-checked:bg-cyan-400"
                                     ></div>
                                 </label>
                             </div>
@@ -106,15 +130,21 @@ export default function Notification() {
                                 <label className="relative inline-flex items-center cursor-pointer">
                                     <input
                                         type="checkbox"
-                                        name="1 boy"
-                                        value=""
+                                        value="5"
+                                        name="switch"
+                                        onChange={(event) =>
+                                            selectChange(
+                                                event,
+                                                event.target.tagName
+                                            )
+                                        }
                                         className="sr-only peer"
                                     />
                                     <div
-                                        className="w-16 h-6 bg-gray-200 rounded-full peer 
-                                peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
-                                after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
-                                peer-checked:bg-blue-600"
+                                        className="w-16 h-6 bg-zinc-600 rounded-full peer 
+                                        peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
+                                        after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
+                                        peer-checked:bg-cyan-400"
                                     ></div>
                                 </label>
                             </div>
@@ -128,15 +158,21 @@ export default function Notification() {
                                 <label className="relative inline-flex items-center cursor-pointer">
                                     <input
                                         type="checkbox"
-                                        name="1 boy"
-                                        value=""
+                                        value="6"
+                                        name="switch"
+                                        onChange={(event) =>
+                                            selectChange(
+                                                event,
+                                                event.target.tagName
+                                            )
+                                        }
                                         className="sr-only peer"
                                     />
                                     <div
-                                        className="w-16 h-6 bg-gray-200 rounded-full peer 
-                                peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
-                                after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
-                                peer-checked:bg-blue-600"
+                                        className="w-16 h-6 bg-zinc-600 rounded-full peer 
+                                        peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
+                                        after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
+                                        peer-checked:bg-cyan-400"
                                     ></div>
                                 </label>
                             </div>
@@ -150,15 +186,21 @@ export default function Notification() {
                                 <label className="relative inline-flex items-center cursor-pointer">
                                     <input
                                         type="checkbox"
-                                        name="1 boy"
-                                        value=""
+                                        value="7"
+                                        name="switch"
+                                        onChange={(event) =>
+                                            selectChange(
+                                                event,
+                                                event.target.tagName
+                                            )
+                                        }
                                         className="sr-only peer"
                                     />
                                     <div
-                                        className="w-16 h-6 bg-gray-200 rounded-full peer 
-                                peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
-                                after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
-                                peer-checked:bg-blue-600"
+                                        className="w-16 h-6 bg-zinc-600 rounded-full peer 
+                                        peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
+                                        after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
+                                        peer-checked:bg-cyan-400"
                                     ></div>
                                 </label>
                             </div>
@@ -172,15 +214,21 @@ export default function Notification() {
                                 <label className="relative inline-flex items-center cursor-pointer">
                                     <input
                                         type="checkbox"
-                                        name="1 boy"
-                                        value=""
+                                        value="8"
+                                        name="switch"
+                                        onChange={(event) =>
+                                            selectChange(
+                                                event,
+                                                event.target.tagName
+                                            )
+                                        }
                                         className="sr-only peer"
                                     />
                                     <div
-                                        className="w-16 h-6 bg-gray-200 rounded-full peer 
-                                peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
-                                after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
-                                peer-checked:bg-blue-600"
+                                        className="w-16 h-6 bg-zinc-600 rounded-full peer 
+                                        peer-checked:after:translate-x-11 peer-checked:after:border-white after:content-[''] 
+                                        after:absolute after:top-0.5  after:bg-white after:border after:rounded-full after:h-5 after:w-5 after:transition-all  
+                                        peer-checked:bg-cyan-400"
                                     ></div>
                                 </label>
                             </div>

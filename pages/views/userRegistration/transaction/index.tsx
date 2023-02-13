@@ -1,17 +1,16 @@
 /* eslint-disable require-jsdoc */
 import React, { useState } from "react";
 import Head from "next/head";
-import Header from "../../../components/header";
-import Layout from "../../../components/layout";
+import Header from "../../../../components/header";
+import Layout from "../../../../components/layout";
 import Link from "next/link";
 import Image from "next/image";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
-import zenith from "../../../assets/zenith.jpg";
-import "react-tabs/style/react-tabs.css";
-import fidelity from "../../../assets/fidelity.png";
-import HM from "../../../assets/HM.png";
+import zenith from "../../../../assets/zenith.jpg";
+import fidelity from "../../../../assets/fidelity.png";
+import HM from "../../../../assets/HM.png";
 import Modal from "react-modal";
-import TransactionModal from "../../../components/transaction";
+import TransactionModal from "../../../../components/transaction";
 
 export default function ClientList() {
     const [modalIsOpen, setModalIsOpen] = useState(false);
@@ -76,14 +75,14 @@ export default function ClientList() {
                     <div className="px-[5rem]">
                         <Tabs>
                             <div className="flex items-end  h-[4.6rem] justify-between border-b-2">
-                                <TabList className="flex flex-row gap-x-20">
-                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8 focus:none">
+                                <TabList className="flex flex-row gap-x-32">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px] ">
                                         All Transaction
                                     </Tab>
-                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px]">
                                         Sent
                                     </Tab>
-                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-8">
+                                    <Tab selectedClassName="text-[#FA790F] underline underline-offset-[5.5px]">
                                         Received
                                     </Tab>
                                 </TabList>

@@ -2,8 +2,8 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
 import Head from "next/head";
-import Header from "../../../components/header";
-import Layout from "../../../components/layout";
+import Header from "../../../../components/header";
+import Layout from "../../../../components/layout";
 import Link from "next/link";
 import { Tabs, TabList, Tab, TabPanel } from "react-tabs";
 import BankInformation from "./bankInformation";
@@ -37,7 +37,9 @@ export default function Detail() {
                             User registration
                             <span className="text-black">/View Details</span>
                         </div>
-                        <Link href={"/views/userRegistration/formPage"}>
+                        <Link
+                            href={"/views/userRegistration/clientList/formPage"}
+                        >
                             <button className="bg-[#D0650D] text-white rounded-md p-1 px-10">
                                 Edit
                             </button>

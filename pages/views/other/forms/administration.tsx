@@ -1,8 +1,32 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable require-jsdoc */
-import React from "react";
+import React, { useRef, useState } from "react";
 import Link from "next/link";
+import IconButton from "@mui/material/IconButton";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { Editor } from "@tinymce/tinymce-react";
+
+const adminOptions = ["Add new admin", "Duplicate", "Edit", "Delete"];
+
+// const limitOptions = ["Duplicate", "Edit", "Delete"];
+
+const ITEM_HEIGHT = 48;
 
 export default function Administration() {
+    const editorRef = useRef();
+    const [body, setBody] = useState("");
+
+    const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event: React.MouseEvent<HTMLElement>) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
     return (
         <>
             {/* Form */}
@@ -18,10 +42,10 @@ export default function Administration() {
                             </div>
                             <div>
                                 <input
+                                    min={0}
+                                    max={100}
                                     type="range"
-                                    className="w pr-20 h-1 rounded bg-orange-500 appearance-none"
-                                    min="0"
-                                    max="100"
+                                    className="w-52 h-1 rounded bg-orange-500 appearance-none"
                                 />
                             </div>
                         </div>
@@ -36,8 +60,10 @@ export default function Administration() {
                             </div>
                             <div>
                                 <input
+                                    min={0}
+                                    max={100}
                                     type="range"
-                                    className="w pr-20 h-1 rounded bg-orange-500 appearance-none"
+                                    className="w-52 h-1 rounded bg-orange-500 appearance-none"
                                 />
                             </div>
                         </div>
@@ -52,8 +78,10 @@ export default function Administration() {
                             </div>
                             <div>
                                 <input
+                                    min={0}
+                                    max={100}
                                     type="range"
-                                    className="w pr-20 h-1 rounded bg-orange-500 appearance-none"
+                                    className="w-52 h-1 rounded bg-orange-500 appearance-none"
                                 />
                             </div>
                         </div>
@@ -80,7 +108,7 @@ export default function Administration() {
                             <div className="flex justify-center">Stuff</div>
                             <div className="flex justify-center">IT</div>
                             <div className="flex justify-center">
-                                <span className="px-2 rounded-full bg-sky-100 text-blue-800 font-semibold text-xs flex items-center cursor-pointer">
+                                <span className="px-3 h-5 rounded-full bg-sky-100 text-blue-800 font-semibold text-xs flex items-center cursor-pointer">
                                     <span
                                         style={{
                                             width: 5,
@@ -93,7 +121,50 @@ export default function Administration() {
                                     Active
                                 </span>
                             </div>
-                            <div className="flex justify-center">:</div>
+                            <div className="flex justify-center">
+                                <div>
+                                    <IconButton
+                                        aria-label="more"
+                                        id="long-button"
+                                        aria-controls={
+                                            open ? "long-menu" : undefined
+                                        }
+                                        aria-expanded={
+                                            open ? "true" : undefined
+                                        }
+                                        aria-haspopup="true"
+                                        onClick={handleClick}
+                                    >
+                                        <MoreVertIcon />
+                                    </IconButton>
+                                    <Menu
+                                        id="long-menu"
+                                        MenuListProps={{
+                                            "aria-labelledby": "long-button",
+                                        }}
+                                        anchorEl={anchorEl}
+                                        open={open}
+                                        onClose={handleClose}
+                                        PaperProps={{
+                                            style: {
+                                                maxHeight: ITEM_HEIGHT * 4.5,
+                                                width: "20ch",
+                                                position: "absolute",
+                                            },
+                                        }}
+                                    >
+                                        {adminOptions.map((option) => (
+                                            <MenuItem
+                                                key={option}
+                                                selected={option === "Pyxis"}
+                                                onClick={handleClose}
+                                            >
+                                                {option}
+                                            </MenuItem>
+                                        ))}
+                                    </Menu>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div className="border-b pb-10">
@@ -135,7 +206,49 @@ export default function Administration() {
                                 ></div>
                             </div>
                             <div className="flex justify-center">30</div>
-                            <div className="flex justify-center">:</div>
+                            <div className="flex justify-center">
+                                <div>
+                                    <IconButton
+                                        aria-label="more"
+                                        id="long-button"
+                                        aria-controls={
+                                            open ? "long-menu" : undefined
+                                        }
+                                        aria-expanded={
+                                            open ? "true" : undefined
+                                        }
+                                        aria-haspopup="true"
+                                        onClick={handleClick}
+                                    >
+                                        <MoreVertIcon />
+                                    </IconButton>
+                                    <Menu
+                                        id="long-menu"
+                                        MenuListProps={{
+                                            "aria-labelledby": "long-button",
+                                        }}
+                                        anchorEl={anchorEl}
+                                        open={open}
+                                        onClose={handleClose}
+                                        PaperProps={{
+                                            style: {
+                                                maxHeight: ITEM_HEIGHT * 4.5,
+                                                width: "20ch",
+                                            },
+                                        }}
+                                    >
+                                        {adminOptions.map((option) => (
+                                            <MenuItem
+                                                key={option}
+                                                selected={option === "Pyxis"}
+                                                onClick={handleClose}
+                                            >
+                                                {option}
+                                            </MenuItem>
+                                        ))}
+                                    </Menu>
+                                </div>
+                            </div>
 
                             {/* Table Row 2*/}
 
@@ -155,7 +268,49 @@ export default function Administration() {
                                 ></div>
                             </div>
                             <div className="flex justify-center">30</div>
-                            <div className="flex justify-center">:</div>
+                            <div className="flex justify-center">
+                                <div>
+                                    <IconButton
+                                        aria-label="more"
+                                        id="long-button"
+                                        aria-controls={
+                                            open ? "long-menu" : undefined
+                                        }
+                                        aria-expanded={
+                                            open ? "true" : undefined
+                                        }
+                                        aria-haspopup="true"
+                                        onClick={handleClick}
+                                    >
+                                        <MoreVertIcon />
+                                    </IconButton>
+                                    <Menu
+                                        id="long-menu"
+                                        MenuListProps={{
+                                            "aria-labelledby": "long-button",
+                                        }}
+                                        anchorEl={anchorEl}
+                                        open={open}
+                                        onClose={handleClose}
+                                        PaperProps={{
+                                            style: {
+                                                maxHeight: ITEM_HEIGHT * 4.5,
+                                                width: "20ch",
+                                            },
+                                        }}
+                                    >
+                                        {adminOptions.map((option) => (
+                                            <MenuItem
+                                                key={option}
+                                                selected={option === "Pyxis"}
+                                                onClick={handleClose}
+                                            >
+                                                {option}
+                                            </MenuItem>
+                                        ))}
+                                    </Menu>
+                                </div>
+                            </div>
 
                             {/* Table Row 3*/}
 
@@ -173,7 +328,49 @@ export default function Administration() {
                                 ></div>
                             </div>
                             <div className="flex justify-center">30</div>
-                            <div className="flex justify-center">:</div>
+                            <div className="flex justify-center">
+                                <div>
+                                    <IconButton
+                                        aria-label="more"
+                                        id="long-button"
+                                        aria-controls={
+                                            open ? "long-menu" : undefined
+                                        }
+                                        aria-expanded={
+                                            open ? "true" : undefined
+                                        }
+                                        aria-haspopup="true"
+                                        onClick={handleClick}
+                                    >
+                                        <MoreVertIcon />
+                                    </IconButton>
+                                    <Menu
+                                        id="long-menu"
+                                        MenuListProps={{
+                                            "aria-labelledby": "long-button",
+                                        }}
+                                        anchorEl={anchorEl}
+                                        open={open}
+                                        onClose={handleClose}
+                                        PaperProps={{
+                                            style: {
+                                                maxHeight: ITEM_HEIGHT * 4.5,
+                                                width: "20ch",
+                                            },
+                                        }}
+                                    >
+                                        {adminOptions.map((option) => (
+                                            <MenuItem
+                                                key={option}
+                                                selected={option === "Pyxis"}
+                                                onClick={handleClose}
+                                            >
+                                                {option}
+                                            </MenuItem>
+                                        ))}
+                                    </Menu>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -217,33 +414,48 @@ export default function Administration() {
                                 />
                             </div>
                             <div>
-                                <label
-                                    htmlFor="email"
-                                    className="block mb-2 mt-5 text-sm font-medium text-gray-700"
-                                >
-                                    Message
-                                </label>
-                                <textarea
-                                    id="text"
-                                    className="border border-gray-300 text-gray-900 text-sm bg-slate-50 rounded-sm block w-full h-56 p-2.5 py-8 px-4"
-                                />
-                            </div>
-                            <div className="flex items-center bg-white justify-between py-3">
-                                <div className="text-[#FA790F]">
-                                    Tools will be here
+                                <div className="relative z-0">
+                                    <label
+                                        htmlFor="email"
+                                        className="block mb-2 mt-5 text-sm font-medium text-gray-700"
+                                    >
+                                        Message
+                                    </label>
+                                    <Editor
+                                        onEditorChange={(newText) => {
+                                            setBody(newText);
+                                        }}
+                                        init={{
+                                            height: 400,
+                                            min_width: 900,
+                                            menubar: false,
+                                            statusbar: false,
+                                            // The link in the toolbar doesn't show
+                                            toolbar:
+                                                "bold underline italic" +
+                                                " | " +
+                                                "alignjustify  alignleft aligncenter " +
+                                                " | " +
+                                                " link ",
+                                            toolbar_location: "bottom",
+                                            skin: "outside",
+                                        }}
+                                    />
+                                    <div className="absolute bottom-2 right-8 z-10">
+                                        <Link href={"/"}>
+                                            <button className="border border-[#D0650D] text-[#D0650D] rounded-md p-1 px-9 mr-2 hover:text-orange-300">
+                                                Cancel
+                                            </button>
+                                            <button className="bg-[#D0650D] text-white rounded-md p-1 px-10 hover:shadow-md hover:shadow-[#D0650D]">
+                                                Save
+                                            </button>
+                                        </Link>
+                                    </div>
                                 </div>
-                                <Link href={"/"}>
-                                    <button className="border border-[#D0650D] text-[#D0650D] rounded-md p-1 px-9 mr-2 hover:text-orange-300">
-                                        Cancel
-                                    </button>
-                                    <button className="bg-[#D0650D] text-white rounded-md p-1 px-10 hover:shadow-md hover:shadow-[#D0650D]">
-                                        Save
-                                    </button>
-                                </Link>
                             </div>
                             <div className="flex flex-row justify-evenly mt-10 mb-20 py-10 border-b">
                                 <div className="flex flex-col justify-center items-center">
-                                    <div className="text-gray-500 mb-2">
+                                    <div className="text-gray-500">
                                         Message type
                                     </div>
                                     <div className="text-[#D0650D] text-sm">
@@ -254,16 +466,58 @@ export default function Administration() {
                                     <div className="text-gray-500 mb-2">
                                         Description
                                     </div>
-                                    <div className="text-xs">
+                                    <div className="text-xs font-normal">
                                         For users whose loan request was not
                                         succesful
                                     </div>
                                 </div>
                                 <div className="flex flex-col justify-center items-center">
-                                    <div className="text-gray-500 mb-2">
-                                        Action
+                                    <div className="text-gray-500">Action</div>
+                                    <div>
+                                        <IconButton
+                                            aria-label="more"
+                                            id="long-button"
+                                            aria-controls={
+                                                open ? "long-menu" : undefined
+                                            }
+                                            aria-expanded={
+                                                open ? "true" : undefined
+                                            }
+                                            aria-haspopup="true"
+                                            onClick={handleClick}
+                                        >
+                                            <MoreVertIcon />
+                                        </IconButton>
+                                        <Menu
+                                            id="long-menu"
+                                            MenuListProps={{
+                                                "aria-labelledby":
+                                                    "long-button",
+                                            }}
+                                            anchorEl={anchorEl}
+                                            open={open}
+                                            onClose={handleClose}
+                                            PaperProps={{
+                                                style: {
+                                                    maxHeight:
+                                                        ITEM_HEIGHT * 4.5,
+                                                    width: "20ch",
+                                                },
+                                            }}
+                                        >
+                                            {adminOptions.map((option) => (
+                                                <MenuItem
+                                                    key={option}
+                                                    selected={
+                                                        option === "Pyxis"
+                                                    }
+                                                    onClick={handleClose}
+                                                >
+                                                    {option}
+                                                </MenuItem>
+                                            ))}
+                                        </Menu>
                                     </div>
-                                    <div>:</div>
                                 </div>
                             </div>
                         </form>
