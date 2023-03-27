@@ -55,6 +55,12 @@ a {
     background: linear-gradient(308.18deg, #fdbc87 6.12%, #d0650d 93.32%);
 }
 
+#plans:hover {
+    background: linear-gradient(162.56deg, #B6590C 8.08%, #7D3D08 89.02%);
+}
+
+
+
 .sidecolor {
     background: linear-gradient(
             264.89deg,

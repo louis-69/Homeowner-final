@@ -1,7 +1,9 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
 import Footer from "./footer";
-import SideBar from "./sidebar";
+import Header from "./header";
+
+
 
 type layoutType = {
     children?: any;
@@ -9,17 +11,19 @@ type layoutType = {
 
 export default function Layout({ children }: layoutType) {
     return (
-        <section className=" h-screen w-full flex flex-col">
-            <SideBar />
-
+        <section className="w-full flex flex-col">
+            <Header />
             <div
-                className="flex h-screen flex-grow flex-col pl-[16rem]
+                className="flex h-screen flex-grow flex-col  
 			"
             >
                 {children}
 
-                <Footer />
+                {/* <Footer /> */}
+
             </div>
+
         </section>
+        
     );
 }

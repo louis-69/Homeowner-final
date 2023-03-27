@@ -6,14 +6,12 @@ type bubbleProp = {
 };
 export default function Bubble(props: bubbleProp) {
     const color =
-        props.name === "Approved"
-            ? "bg-[#FFECCC] text-[#965E00] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg list-disc"
-            : props.name === "Rejected"
-            ? "bg-[#FFE0E0] text-[#D30000] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg"
+        props.name === "Renting"
+            ? "bg-[#FEE4CF] text-[#FA790F] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg list-disc"
+            : props.name === "Buying"
+            ? "bg-[#CDFFCD] text-[#007F00] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg"
             : props.name === "Paid"
             ? "bg-[#CDFFCD] text-[#007F00] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg"
-            : props.name === "Pending"
-            ? "bg-[#FFECCC] text-[#965E00] text-sm font-medium mr-2 px-3 py-0.5 rounded-lg"
             : "text-black text-sm font-medium mr-2 px-3 py-0.5 rounded-lg";
     return (
         <>

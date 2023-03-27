@@ -14,6 +14,10 @@ module.exports = {
             xl: "1280px",
             xg: "2000px",
         },
+        backgroundImage: {
+            'signin': "url('../assets/signin.jpg')",
+            'signup': "url('../assets/signup.png')",
+          },
         extend: {},
     },
     plugins: [require("flowbite/plugin")],
