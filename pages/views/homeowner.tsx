@@ -6,7 +6,7 @@ import Header from "../../components/header";
 import Footer from "../../components/footer";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Image from "next/image";
-import exclamation from "../assets/exclamation.png"
+import exclamation from "../../assets/exclamation.png"
 import ProfileRectangle from "../../components/dashboard/homeownerDashboard";
 import { MediumRectangle } from "../../components/dashboard/homeownerDashboard";
 import { BookingsRectangle } from "../../components/dashboard/homeownerDashboard";
