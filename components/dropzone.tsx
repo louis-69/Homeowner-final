@@ -7,7 +7,6 @@ import Image from 'next/image';
 const baseStyle = {
   flex: 1,
   display: 'flex',
-  flexDirection: 'column',
   width:'80%',
   alignItems: 'center',
   padding: '70px',

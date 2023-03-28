@@ -2,26 +2,26 @@
 /* eslint-disable require-jsdoc */
 import React from "react";
 import Head from "next/head";
-import Header from "../components/header";
-import Footer from "../components/footer";
+import Header from "../../components/header";
+import Footer from "../../components/footer";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Image from "next/image";
 import exclamation from "../assets/exclamation.png"
-import ProfileRectangle from "../components/dashboard/homeownerDashboard";
-import { MediumRectangle } from "../components/dashboard/homeownerDashboard";
-import { BookingsRectangle } from "../components/dashboard/homeownerDashboard";
-import { PropertiesRectangle } from "../components/dashboard/homeownerDashboard";
-import { LargeRectangle } from "../components/dashboard/homeownerDashboard";
-import UserDetails from "../components/navbar";
-import SalesChart from "../components/dashboard/salesChart"
-import PropertiesTable from "../components/properties/propertiesTable";
-import PendingTable from "../components/requests/pendingTable";
-import AppointmentTable from "../components/requests/appointmentTable";
-import GuestsTable from "../components/requests/guestsTable";
-import Plan from "../components/subscription/plan";
-import { Plan1, Plan2 } from "../components/subscription/plan";
+import ProfileRectangle from "../../components/dashboard/homeownerDashboard";
+import { MediumRectangle } from "../../components/dashboard/homeownerDashboard";
+import { BookingsRectangle } from "../../components/dashboard/homeownerDashboard";
+import { PropertiesRectangle } from "../../components/dashboard/homeownerDashboard";
+import { LargeRectangle } from "../../components/dashboard/homeownerDashboard";
+import UserDetails from "../../components/navbar";
+import SalesChart from "../../components/dashboard/salesChart"
+import PropertiesTable from "../../components/properties/propertiesTable";
+import PendingTable from "../../components/requests/pendingTable";
+import AppointmentTable from "../../components/requests/appointmentTable";
+import GuestsTable from "../../components/requests/guestsTable";
+import Plan from "../../components/subscription/plan";
+import { Plan1, Plan2 } from "../../components/subscription/plan";
 import Link from "next/link";
-import Announcements from "../components/notifications/announcements";
+import Announcements from "../../components/notifications/announcements";
 
 
 type navbarProp = {

@@ -5,8 +5,8 @@ import Head from "next/head";
 import Image from "next/image";
 import { Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
-import logo from "../assets/logo.png"
-import googlelogo from "../assets/googlelogo.png"
+import logo from "../../../assets/logo.png"
+import googlelogo from "../../../assets/googlelogo.png"
 import Link from "next/link";
 
 

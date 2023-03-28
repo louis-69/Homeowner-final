@@ -1,8 +1,7 @@
 /* eslint-disable require-jsdoc */
-import React, { useState } from "react";
+import React from "react";
 import Image from "next/image";
 import House1 from "../../assets/House1.png"
-import House2 from "../../assets/House2.png"
 import guest from "../../assets/guest.png"
 
 import IconButton from "@mui/material/IconButton";

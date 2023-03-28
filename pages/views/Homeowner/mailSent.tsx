@@ -3,8 +3,8 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import logo from "../assets/logo.png"
-import mailsent from "../assets/mailsent.png"
+import logo from "../../../assets/logo.png"
+import mailsent from "../../../assets/mailsent.png"
 
 
 export default function MailSent() {

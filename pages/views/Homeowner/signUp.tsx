@@ -3,8 +3,8 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import logo from "../assets/logo.png"
-import googlelogo from "../assets/googlelogo.png"
+import logo from "../../../assets/logo.png"
+import googlelogo from "../../../assets/googlelogo.png"
 import { Formik, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 
