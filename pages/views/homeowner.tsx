@@ -19,7 +19,6 @@ import PendingTable from "../../components/requests/pendingTable";
 import AppointmentTable from "../../components/requests/appointmentTable";
 import GuestsTable from "../../components/requests/guestsTable";
 import Plan from "../../components/subscription/plan";
-import { Plan1, Plan2 } from "../../components/subscription/plan";
 import Link from "next/link";
 import Announcements from "../../components/notifications/announcements";
 
@@ -572,11 +571,11 @@ export default function Home(props: navbarProp) {
                                     <div className="flex">
                                     <Plan planType="BASIC PLAN" amount="20" duration="Month" numOfProperties="5 properties" benefit1="Benefit 1" benefit2="Benefit 2" benefit3="Benefit 3" benefit4="Benefit 4" benefit5="Benefit 5"/>
                                     
-                                    <Plan1 planType="BASIC PLAN" amount="20" duration="Month" numOfProperties="5 properties" benefit1="Benefit 1" benefit2="Benefit 2" benefit3="Benefit 3" benefit4="Benefit 4" benefit5="Benefit 5"/>
+                                    <Plan planType="BASIC PLAN" amount="20" duration="Month" numOfProperties="5 properties" benefit1="Benefit 1" benefit2="Benefit 2" benefit3="Benefit 3" benefit4="Benefit 4" benefit5="Benefit 5"/>
 
-                                    <Plan2 planType="BASIC PLAN" amount="20" duration="Month" numOfProperties="5 properties" benefit1="Benefit 1" benefit2="Benefit 2" benefit3="Benefit 3" benefit4="Benefit 4" benefit5="Benefit 5"/>
+                                    <Plan planType="BASIC PLAN" amount="20" duration="Month" numOfProperties="5 properties" benefit1="Benefit 1" benefit2="Benefit 2" benefit3="Benefit 3" benefit4="Benefit 4" benefit5="Benefit 5"/>
 
-                                    <Plan1 planType="BASIC PLAN" amount="20" duration="Month" numOfProperties="5 properties" benefit1="Benefit 1" benefit2="Benefit 2" benefit3="Benefit 3" benefit4="Benefit 4" benefit5="Benefit 5"/>
+                                    <Plan planType="BASIC PLAN" amount="20" duration="Month" numOfProperties="5 properties" benefit1="Benefit 1" benefit2="Benefit 2" benefit3="Benefit 3" benefit4="Benefit 4" benefit5="Benefit 5"/>
 
                                     </div>
                                 </div>
