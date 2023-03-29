@@ -19,7 +19,6 @@ import PendingTable from "../components/requests/pendingTable";
 import AppointmentTable from "../components/requests/appointmentTable";
 import GuestsTable from "../components/requests/guestsTable";
 import Plan from "../components/subscription/plan";
-import { Plan1, Plan2 } from "../components/subscription/plan";
 import Link from "next/link";
 import Announcements from "../components/notifications/announcements";
 
@@ -44,14 +43,14 @@ export default function Homeowner(props: navbarProp) {
                         content="width=device-width, initial-scale=1"
                     />
                 </Head>
-            <div className="fixed w-full z-20">
+            <div className="w-full">
                 <Header />
                 </div>
                 {/* Code goes into the main tag */}
                 <main className="bg-[#FAFAFA] min-h-screen">
                     {/* Bottom menu */}
                     <nav className="items-center justify-center ">
-                <div className="flex fixed z-20 w-full mt-24 mb-20 bg-[#FA790F] items-center">
+                <div className="flex w-full bg-[#FA790F] items-center">
                 <UserDetails name="John Doe" hostType="Verified Host" joinDate="Since April 2022"/>
                 <div>
                 <button type="button" className="text-[#FA790F] bg-white focus:ring-0 font-medium rounded leading-[130%] text-sm px-4 mr-20 py-2 mt-5 mb-2 ">Account Settings</button>
@@ -62,7 +61,7 @@ export default function Homeowner(props: navbarProp) {
                     <div>
                         <Tabs>
                             <div className="flex bg-[#FA790F]">
-                                <TabList className="flex bg-[#FA790F] pl-20 py-5 flex-row mt-[248px] w-full mb-52  fixed z-20 text-[#FFE1C9] gap-x-14">
+                                <TabList className="flex bg-[#FA790F] pt-8 pb-6 pl-20 flex-row w-full text-[#FFE1C9] gap-x-14">
                                     <Tab selectedClassName="text-white underline underline-offset-[9px]">
                                         Dashboard
                                     </Tab>
@@ -85,7 +84,7 @@ export default function Homeowner(props: navbarProp) {
                            
                                 {/* Dashboard */}
                             <TabPanel>
-                                <div className="relative mt-[300px] overflow-x-auto w-full bg-[#FAFAFA] sm:rounded-t-">
+                                <div className="relative mt- overflow-x-auto w-full bg-[#FAFAFA] sm:rounded-t-">
                                 <div className="flex gap-x-[8%] grow">
                                 <div className="grow w-[50%] pl-[5%]">
                                 <div className="flex gap-x-[35px] grow mb-0 mt-10">
@@ -118,7 +117,7 @@ export default function Homeowner(props: navbarProp) {
 
                             {/* Properties tab */}
                             <TabPanel>
-                                <div className="relative mt-[300px] overflow-x-auto bg-[#FAFAFA] sm:rounded-t-">                                
+                                <div className="relative overflow-x-auto bg-[#FAFAFA] sm:rounded-t-">                                
                                 <div className="flex">
                                     <form className="flex ml-20 mr-auto mt-10">
                                         {/* First search field */}
@@ -255,7 +254,7 @@ export default function Homeowner(props: navbarProp) {
 
                             {/* Requests tab */}
                             <TabPanel>
-                                <div className="relative mt-[300px] overflow-x-auto bg-[#FAFAFA]">
+                                <div className="relative overflow-x-auto bg-[#FAFAFA]">
                             <p className="mt-9 text-[#58575] font-normal leading-[140%] text-sm ml-20 ">Guests can only proceed to make payment after you have accepted their request</p>
                                 <div className="relative overflow-x-auto shadow-md bg- ">
                                     
@@ -401,7 +400,7 @@ export default function Homeowner(props: navbarProp) {
 
                                     {/* Appointment tab */}
                                     <TabPanel>
-                                    <table className="w-[90%] ml-20  text-left mb-24 text-sm text-gray-500 ">
+                                    <table className="w-[90%] ml-20 mt-2 text-left mb-24 text-sm text-gray-500 ">
                                         <thead className="bg-white text-xs border-b text-[#747A80]">
                                             <tr>
                                                 <th
@@ -553,7 +552,7 @@ export default function Homeowner(props: navbarProp) {
 
                             {/* Subscription tab */}
                             <TabPanel>
-                                <div className="relative mt-[300px] overflow-x-auto bg-[#FAFAFA] ">
+                                <div id="subscriptions" className="relative overflow-x-auto bg-[#FAFAFA] ">
                                     <div className="ml-[5%] mt-10 flex">
                                     <div className="w-[5px] bg-[#FA790F] h-[69px]"></div>
                                     <div className="flex w-[566px] items-center h-[69px] bg-[#D1D2E4]/20 ">
@@ -568,15 +567,15 @@ export default function Homeowner(props: navbarProp) {
                                     </div>
 
                                     <div className="w-[20%] ">
-                                    <Plan1 planType="BASIC PLAN" amount="20" duration="Month" numOfProperties="5 properties" benefit1="Benefit 1" benefit2="Benefit 2" benefit3="Benefit 3" benefit4="Benefit 4" benefit5="Benefit 5"/>
+                                    <Plan planType="BASIC PLAN" amount="20" duration="Month" numOfProperties="5 properties" benefit1="Benefit 1" benefit2="Benefit 2" benefit3="Benefit 3" benefit4="Benefit 4" benefit5="Benefit 5"/>
                                     </div>
 
                                     <div className="w-[20%] bg-gradient-to-b from-black to-white ">
-                                    <Plan2 planType="BASIC PLAN" amount="20" duration="Month" numOfProperties="5 properties" benefit1="Benefit 1" benefit2="Benefit 2" benefit3="Benefit 3" benefit4="Benefit 4" benefit5="Benefit 5"/>
+                                    <Plan planType="BASIC PLAN" amount="20" duration="Month" numOfProperties="5 properties" benefit1="Benefit 1" benefit2="Benefit 2" benefit3="Benefit 3" benefit4="Benefit 4" benefit5="Benefit 5"/>
                                     </div>
 
                                     <div className="w-[20%] ">
-                                    <Plan1 planType="BASIC PLAN" amount="20" duration="Month" numOfProperties="5 properties" benefit1="Benefit 1" benefit2="Benefit 2" benefit3="Benefit 3" benefit4="Benefit 4" benefit5="Benefit 5"/>
+                                    <Plan planType="BASIC PLAN" amount="20" duration="Month" numOfProperties="5 properties" benefit1="Benefit 1" benefit2="Benefit 2" benefit3="Benefit 3" benefit4="Benefit 4" benefit5="Benefit 5"/>
                                     </div>
                                     </div>
                                 </div>
@@ -586,7 +585,7 @@ export default function Homeowner(props: navbarProp) {
                             </TabPanel>
                             {/* Notifications tab */}
                             <TabPanel>
-                            <div className="relative mt-[300px] overflow-x-auto bg-[#FAFAFA] ">
+                            <div className="relative overflow-x-auto bg-[#FAFAFA] ">
                                 <div className="bg-white mt-12 mr-20 ml-20 pb-20 ">
                                 <p className="text-[#FA790F] pt-[1.8125rem] mr-[2rem] cursor-pointer font-medium text-base leading-5 text-right">Mark all as read</p>
                                 </div>

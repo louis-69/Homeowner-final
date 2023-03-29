@@ -59,6 +59,10 @@ a {
     background: linear-gradient(162.56deg, #B6590C 8.08%, #7D3D08 89.02%);
 }
 
+#plans:hover #plan-buttons {
+border-color: white;
+}
+
 
 
 .sidecolor {
