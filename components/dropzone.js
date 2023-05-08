@@ -10,6 +10,8 @@ const baseStyle = {
   width:'80%',
   alignItems: 'center',
   padding: '70px',
+  justifyItems: 'center',
+  paddingLeft: '200px',
   borderWidth: 2,
   borderRadius: 2,
   borderColor: '#eeeeee',

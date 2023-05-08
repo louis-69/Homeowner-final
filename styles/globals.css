@@ -56,20 +56,13 @@ a {
 }
 
 #plans:hover {
-    background: linear-gradient(162.56deg, #B6590C 8.08%, #7D3D08 89.02%);
+    background: linear-gradient(162.56deg, #b6590c 8.08%, #7d3d08 89.02%);
 }
 
 #plans:hover #plan-buttons {
-border-color: white;
+    border-color: white;
 }
 
-
-
 .sidecolor {
-    background: linear-gradient(
-            264.89deg,
-            rgba(250, 121, 15, 0.7) 7.26%,
-            rgba(167, 81, 10, 0.7) 83.12%
-        ),
-        linear-gradient(2.16deg, #d0650d 39.33%, #fa790f 93.69%);
+    background: white;
 }

@@ -30,7 +30,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "components/properties/amenities.tsx"  ],
+, "components/properties/amenities.tsx", "components/dropzone.js"  ],
   "exclude": [
     "node_modules"
   ]

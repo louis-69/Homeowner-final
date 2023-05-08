@@ -3,6 +3,7 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import logo from "../../../assets/logo.png"
 import checkmark from "../../../assets/checkmark.png"
 
@@ -35,7 +36,7 @@ export default function SignUp() {
 
                     <p className="font-black text-xl leading-7 mt-10 text-center ">Your password was reset successfully</p>
 
-                    <p className="text-sm text-center text-[#747A80] mt-[4%] leading-[1.3125rem] ">Go back to <a href="" className="text-[#0028FC] hover:underline-offset-2 hover:underline">sign in</a></p>
+                    <p className="text-sm text-center text-[#747A80] mt-[4%] leading-[1.3125rem] ">Go back to <Link href="/" className="text-[#0028FC] hover:underline-offset-2 hover:underline">sign in</Link></p>
 
                     </div>
                     </section>
